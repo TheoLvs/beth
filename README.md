@@ -20,12 +20,19 @@ The goal is to create:
 - ``HumanPlayer`` to play chess in Jupyter notebook
 - ``RandomPlayer`` the most simple bot to easily test out new ideas and debug
 ### Roadmap
+##### Utils
+- Read PGN files and load into ML algorithms
+
+##### Algorithms & approaches
 - AlphaGo approach: value function and policy function evaluation using Reinforcement Learning & MCTS
 - AlphaZero approach: self play competition
 - NLP approach: predicting next move using NLP techniques (LSTM, Transformers)
 
 ## References
 - https://python-chess.readthedocs.io/en
+
+### Sequential Deep Learning
+- https://pytorch.org/tutorials/beginner/transformer_tutorial.html
 
 ### Game Databases
 - https://www.chess.com/games/

@@ -171,5 +171,7 @@ class Game:
                 game_loop = False
 
             # Clear the output to simulate an animation        
-            if game_loop:
-                output.clear_output(wait = True)
+            output.clear_output(wait = True)
+
+        with output:
+            display(self.board)

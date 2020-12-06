@@ -1,0 +1,523 @@
+[Event "2019-grand-chess-tour-tata-steel"]
+[White "Aronian, Levon"]
+[Black "Carlsen, Magnus"]
+[WhiteFideId "13300474"]
+[BlackFideId "1503014"]
+[Result "0-1"]
+[Round "03"]
+[Date "Fri Nov 22 2019"]
+[WhiteClock "0:00:13"]
+[BlackClock "0:00:29"]
+
+
+1. e4  c5 2. Nf3  d6 3. d4  cxd4 4. Nxd4  Nf6 5. Nc3  a6 6. f3  e5 7. Nb3  Be6 8. Be3  Nbd7 9. g4  Be7 10. Qd2  O-O 11. O-O-O  b5 12. g5  Nh5 13. Kb1  Nb6 14. Na5  Rc8 15. a3  g6 16. h4  Ng3 17. Rg1  Nxf1 18. Rgxf1  Na4 19. Nxa4  bxa4 20. h5  Qd7 21. Rh1  Rfe8 22. Qh2  Bf8 23. Bd2  Rc7 24. Bb4  Rb8 25. Rd3  Qb5 26. Rc3  Rbc8 27. Rxc7  Rxc7 28. Rd1  Rd7 29. Rd3  Be7 30. hxg6  fxg6 31. Qd2  Qb6 32. Qc1  Bd8 33. c4  Qf2 34. Nc6  Bxg5 35. Qxg5  Qf1+ 36. Kc2  Bxc4 37. Qe3  Bxd3+ 38. Qxd3  Qxd3+ 39. Kxd3  h5 40. Ke3  Kf7 41. Bc3  Ke6 42. Nb4  g5 43. Kf2  Rf7 44. Kg2  g4 45. fxg4  Rg7 46. Nd5  Rxg4+ 47. Kf3  Rg1 48. Kf2  Rg7 49. Kf3  h4 50. Be1  h3 51. Bg3  Rb7 52. Nb4  a5 53. Nd3  Rb3 54. Ke2  Kf6 55. Bh2  Kg5 56. Bg3  Kg4 57. Bh2  Rxd3 58. Kxd3  Kf3 59. Kd2  Kxe4 60. Ke2  d5 61. Bg3  d4 62. Bh2  Kd5 63. Kd2  e4 64. Ke2  Kc4 65. Be5  Kb3 66. Kd2  d3 67. Kd1  e3 68. Kc1  Kc4 0-1
+
+
+[Event "2019-world-blitz-championship"]
+[White "Nakamura, Hikaru"]
+[Black "Carlsen, Magnus"]
+[WhiteFideId "2016192"]
+[BlackFideId "1503014"]
+[Result "1/2-1/2"]
+[Round "11"]
+[Date "Sun Dec 29 2019"]
+[WhiteClock "0:00:53"]
+[BlackClock "0:00:41"]
+
+
+1. e4  e5 2. Nf3  Nc6 3. Bb5  a6 4. Ba4  Nf6 5. O-O  Bc5 6. c3  O-O 7. d4  Ba7 8. Re1  b5 9. Bc2  d6 10. h3  h6 11. Be3  Re8 12. Nbd2  Bb7 13. dxe5  Bxe3 14. exf6  Bxd2 15. Qxd2  Qxf6 16. a4  Ne5 17. Nxe5  Qxe5 18. f4  Qe7 19. e5  dxe5 20. Rxe5  Qf6 21. axb5  Rxe5 22. fxe5  Qb6+ 23. Qd4  Qxd4+ 24. cxd4  axb5 25. Rxa8+  Bxa8 26. b4  Bd5 27. g3 1/2-1/2
+
+
+[Event "2020-tata-steel-masters"]
+[White "Carlsen, Magnus"]
+[Black "Giri, Anish"]
+[WhiteFideId "1503014"]
+[BlackFideId "24116068"]
+[Result "1/2-1/2"]
+[Round "01"]
+[Date "Sat Jan 11 2020"]
+[WhiteClock "0:58:16"]
+[BlackClock "0:52:56"]
+
+
+1. c4  Nf6 2. Nc3  e5 3. e3  Nc6 4. Qb3  g6 5. Nf3  Bg7 6. d4  exd4 7. exd4  O-O 8. Be2  d6 9. O-O  Re8 10. h3  Ne4 11. Nxe4  Rxe4 12. Be3  Nxd4 13. Nxd4  Bxd4 14. Bf3  Rh4 15. Bxd4  Rxd4 16. Bxb7  Bxb7 17. Qxb7  Rxc4 18. Rac1  Rxc1 19. Rxc1  c5 20. Rd1  Rb8 21. Qxa7  Rxb2 22. Qxc5  dxc5 23. Rxd8+  Kg7 24. Rc8  Rxa2 25. Rxc5 1/2-1/2
+
+
+[Event "2020-tata-steel-masters"]
+[White "Yu, Yangyi"]
+[Black "Carlsen, Magnus"]
+[WhiteFideId "8603820"]
+[BlackFideId "1503014"]
+[Result "1/2-1/2"]
+[Round "02"]
+[Date "Sun Jan 12 2020"]
+[WhiteClock "0:59:45"]
+[BlackClock "0:58:32"]
+
+
+1. e4  c5 2. Nf3  d6 3. d4  cxd4 4. Nxd4  Nf6 5. Nc3  a6 6. Be3  e5 7. Nf3  Be7 8. Bc4  O-O 9. O-O  Nc6 10. Bb3  Na5 11. Bg5  Nxb3 12. axb3  Be6 13. Bxf6  Bxf6 14. Nd5  Rc8 15. c4  Bg5 16. Nxg5  Qxg5 17. Qd3  Bxd5 18. Qxd5  Rc6 19. Rfd1  Rfc8 20. Rd3  Qe7 21. g3  g6 22. Rad1  Qc7 23. Rc3  Kg7 24. Kg2  Re8 25. Qd3  Rb8 26. Rdc1  h5 27. h4  Qe7 28. Rd1  Qc7 29. Rdc1  Qe7 30. Rd1  Qc7 31. Rdc1 1/2-1/2
+
+
+[Event "2020-tata-steel-masters"]
+[White "Carlsen, Magnus"]
+[Black "Xiong, Jeffery"]
+[WhiteFideId "1503014"]
+[BlackFideId "2047640"]
+[Result "1/2-1/2"]
+[Round "03"]
+[Date "Mon Jan 13 2020"]
+[WhiteClock "1:03:52"]
+[BlackClock "0:36:04"]
+
+
+1. d4  Nf6 2. c4  e6 3. Nf3  d5 4. Nc3  c5 5. cxd5  Nxd5 6. e4  Nxc3 7. bxc3  cxd4 8. cxd4  Bb4+ 9. Bd2  Bxd2+ 10. Qxd2  O-O 11. Bd3  Nc6 12. Bc2  Qe7 13. O-O  Rd8 14. Qe3  b6 15. Rfd1  Bb7 16. Rac1  Rac8 17. h4  Na5 18. Bd3  h6 19. g4  Nc6 20. Bb1  Qd7 21. Kh2  Qd6+ 22. Kg1  Na5 23. Bd3  Rxc1 24. Rxc1  Nc6 25. Bb5  Nxd4 26. Qxd4  Qxd4 27. Nxd4  Rxd4 28. f3  a6 29. Bf1  Rd7 30. a4  Kf8 31. Kf2  Ke7 32. Rb1  Rd6 33. e5  Rc6 34. Bd3  g5 35. h5  Bc8 36. Ke3  Rc5 37. f4  Ra5 38. Rxb6  gxf4+ 39. Kxf4  Rxa4+ 40. Kf3  Ra3 41. Ke4  f6 42. Rb8  Bd7 43. Rb7  fxe5 44. g5  hxg5 45. h6  Kd6 46. Rb6+  Bc6+ 47. Rxc6+  Kxc6 48. h7  Ra4+ 49. Kxe5  Rh4 50. Kf6  g4 51. Kg5  Rh2 52. Kxg4  Kd5 53. Bg6  Rh6 54. Kg5  Rxh7 55. Bxh7  e5 56. Kg4  Kd4 1/2-1/2
+
+
+[Event "2020-tata-steel-masters"]
+[White "Van Foreest, Jorden"]
+[Black "Carlsen, Magnus"]
+[WhiteFideId "1039784"]
+[BlackFideId "1503014"]
+[Result "1/2-1/2"]
+[Round "04"]
+[Date "Tue Jan 14 2020"]
+[WhiteClock "0:42:07"]
+[BlackClock "1:39:43"]
+
+
+1. e4  e5 2. Nf3  Nc6 3. Bc4  Nf6 4. Ng5  d5 5. exd5  Na5 6. Bb5+  c6 7. dxc6  bxc6 8. Bd3  Nd5 9. Nf3  Bd6 10. Nc3  O-O 11. Be2  Nf4 12. O-O  Bg4 13. d3  Nxe2+ 14. Qxe2  f5 15. h3  Bh5 16. g4  fxg4 17. Ng5  Qd7 18. Nce4  Be7 19. Ng3  Bg6 20. Qxg4  Qxg4 21. hxg4  c5 22. N5e4  Nc6 23. Be3  Nd4 24. Rac1  Rac8 25. Kg2  c4 26. Bxd4  exd4 27. f3  Rc6 28. b3  Ba3 29. Rce1  cxd3 30. cxd3  a5 31. Rf2  Bc1 32. Nd2  Bxd3 33. Nc4  Bf4 34. Ne5  Rc3 35. Nxd3  Rxd3 36. Nf5  g6 37. Re4  Bg5 38. Ne7+  Kh8 39. Nc6  Be3 40. Re2  Rd1 41. Nxa5  Rg1+ 42. Kh2  Rc1 43. Kg2  Rg1+ 44. Kh2  Rc1 45. Kg2 1/2-1/2
+
+
+[Event "2020-tata-steel-masters"]
+[White "Carlsen, Magnus"]
+[Black "Dubov, Daniil"]
+[WhiteFideId "1503014"]
+[BlackFideId "24126055"]
+[Result "1/2-1/2"]
+[Round "05"]
+[Date "Thu Jan 16 2020"]
+[WhiteClock "1:40:23"]
+[BlackClock "1:14:52"]
+
+
+1. e4  c5 2. Nf3  Nc6 3. Bb5  g6 4. O-O  Bg7 5. Re1  e5 6. Bxc6  dxc6 7. d3  Qe7 8. a4  Nf6 9. Bg5  h6 10. Be3  O-O 11. h3  b6 12. a5  Ba6 13. Qd2  Kh7 14. Qc3  Nd7 15. axb6  axb6 16. Nbd2  f5 17. Nc4  Qe6 18. Qb3  fxe4 19. Nfd2  exd3 20. cxd3  e4 21. Nxe4  Bxc4 22. Qxc4  Qd5 23. Rxa8  Rxa8 24. Qc2  Ne5 25. Rd1  Rd8 26. Nc3  Qd7 27. b3  Qf5 28. Ne4  Rd5 29. Nc3  Rxd3 30. Rxd3  Qxd3 31. Qxd3  Nxd3 32. Na4  c4 33. bxc4  b5 34. cxb5  cxb5 35. Nc5  Nxc5 36. Bxc5  Kg8 37. Kf1  Kf7 38. Ke2  Ke6 39. Kd3  Kd5 40. Bb4  Bd4 41. f4  Bc5 42. Bd2  Bf8 43. g4  b4 44. h4  h5 45. gxh5  gxh5 46. Bxb4  Bxb4 47. Ke3 1/2-1/2
+
+
+[Event "2020-tata-steel-masters"]
+[White "Carlsen, Magnus"]
+[Black "Caruana, Fabiano"]
+[WhiteFideId "1503014"]
+[BlackFideId "2020009"]
+[Result "1/2-1/2"]
+[Round "06"]
+[Date "Fri Jan 17 2020"]
+[WhiteClock "0:41:27"]
+[BlackClock "0:40:25"]
+
+
+1. d4  Nf6 2. c4  e6 3. Nf3  d5 4. Nc3  Be7 5. Bg5  h6 6. Bh4  dxc4 7. e3  c5 8. Bxc4  cxd4 9. Nxd4  Bd7 10. O-O  O-O 11. Rc1  Nc6 12. Nb3  Rc8 13. Be2  Nd5 14. Bg3  Nxc3 15. Rxc3  Nb4 16. Rxc8  Qxc8 17. Bd6  Nd5 18. Bxe7  Nxe7 19. Qd6  Nf5 20. Qa3  Qb8 21. e4  Qe5 22. exf5  Qxe2 23. Nd4  Qe5 24. fxe6  Qxd4 25. exd7  Rd8 26. g3  Rxd7 27. Re1  Kh7 28. Qf3 1/2-1/2
+
+
+[Event "2020-tata-steel-masters"]
+[White "Anand, Viswanathan"]
+[Black "Carlsen, Magnus"]
+[WhiteFideId "5000017"]
+[BlackFideId "1503014"]
+[Result "1/2-1/2"]
+[Round "07"]
+[Date "Sat Jan 18 2020"]
+[WhiteClock "0:16:38"]
+[BlackClock "1:05:51"]
+
+
+1. e4  c5 2. Nf3  Nc6 3. Bb5  g6 4. O-O  Bg7 5. c3  Nf6 6. Re1  O-O 7. d4  a6 8. Bd3  d5 9. e5  Ne8 10. dxc5  Bg4 11. Be2  Nc7 12. Nbd2  a5 13. h3  Bc8 14. Bd3  Ne6 15. Nb3  a4 16. Nbd4  Nxc5 17. Bc2  Qa5 18. Bd2  Rd8 19. Qc1  Ne6 20. b4  Qc7 21. Nxc6  bxc6 22. Be3  c5 23. bxc5  Nxc5 24. Qa3  Ne6 25. Rab1  d4 26. Nxd4  Bxe5 27. Nb5  Qc6 28. Rb4  Bb7 29. Be4  Qd7 30. Bxb7  Qxb7 31. Rxa4  Bf4 32. Rxa8  Rxa8 33. Qb3  Bxe3 34. Rxe3  Nf4 35. Rf3  Qe4 36. Kh2  Nd5 37. c4  Qe5+ 38. g3  Nf6 39. a3  Ne4 40. Qc2  Ng5 41. Re3  Qc5 42. h4  Ne6 43. Qe2  Rc8 44. Rc3  h5 45. Kg2  Kf8 46. Qe4  Kg8 47. Qd5  Qb6 48. a4  Qa6 49. c5  Qxa4 50. c6  Rd8 51. Qc4  Qxc4 52. Rxc4  Rb8 53. c7  Rc8 54. Rc1 1/2-1/2
+
+
+[Event "2020-tata-steel-masters"]
+[White "Carlsen, Magnus"]
+[Black "Vitiugov, Nikita"]
+[WhiteFideId "1503014"]
+[BlackFideId "4152956"]
+[Result "1-0"]
+[Round "08"]
+[Date "Sun Jan 19 2020"]
+[WhiteClock "0:57:56"]
+[BlackClock "0:12:05"]
+
+
+1. e4  e5 2. Nf3  Nc6 3. Bb5  a6 4. Ba4  Nf6 5. O-O  Be7 6. d3  b5 7. Bb3  d6 8. Bd2  O-O 9. h3  h6 10. Re1  Re8 11. a3  Bf8 12. Nc3  Rb8 13. Ba2  Ne7 14. Nh4  g5 15. Nf3  Ng6 16. Nh2  c6 17. Ne2  d5 18. Ng3  dxe4 19. dxe4  Rb7 20. Qf3  Nf4 21. Rad1  Rd7 22. Be3  Rxd1 23. Rxd1  Qe7 24. Ng4  Nxg4 25. hxg4  Rd8 26. Re1  c5 27. Nf5  Qc7 28. g3  Ne6 29. Qh1  f6 30. Bd5 1-0
+
+
+[Event "2020-tata-steel-masters"]
+[White "Firouzja, Alireza"]
+[Black "Carlsen, Magnus"]
+[WhiteFideId "12573981"]
+[BlackFideId "1503014"]
+[Result "0-1"]
+[Round "09"]
+[Date "Tue Jan 21 2020"]
+[WhiteClock "0:00:58"]
+[BlackClock "0:14:22"]
+
+
+1. e4  e5 2. Nf3  Nc6 3. Bb5  Nf6 4. d3  d6 5. c3  a6 6. Ba4  Be7 7. O-O  O-O 8. Re1  Re8 9. Nbd2  Bf8 10. h3  b5 11. Bc2  Bb7 12. d4  g6 13. a3  Nb8 14. d5  c6 15. c4  Nbd7 16. a4  Qc7 17. b3  Rec8 18. Ra2  bxc4 19. bxc4  a5 20. Nf1  Ba6 21. Ne3  Nc5 22. Nd2  cxd5 23. cxd5  Rab8 24. Ba3  Qd8 25. Qf3  h5 26. Raa1  Bh6 27. Rab1  Rxb1 28. Rxb1  Kg7 29. Nef1  h4 30. Ne3  Bf4 31. Nef1  Qc7 32. g3  hxg3 33. fxg3  Bh6 34. h4  Qd7 35. Kg2  Nxa4 36. Bxa4  Qxa4 37. Bxd6  Qd4 38. Qf2  Qxf2+ 39. Kxf2  Bxf1 0-1
+
+
+[Event "2020-tata-steel-masters"]
+[White "Carlsen, Magnus"]
+[Black "Kovalev, Vladislav"]
+[WhiteFideId "1503014"]
+[BlackFideId "13504398"]
+[Result "1-0"]
+[Round "10"]
+[Date "Wed Jan 22 2020"]
+[WhiteClock "0:54:15"]
+[BlackClock "0:02:39"]
+
+
+1. d4  Nf6 2. c4  e6 3. Nf3  d5 4. Nc3  Be7 5. Bg5  O-O 6. e3  h6 7. Bf4  c5 8. dxc5  Bxc5 9. a3  Nc6 10. Qc2  Nh5 11. Bg3  dxc4 12. Bxc4  Be7 13. Ba2  a6 14. Rd1  Qa5 15. Bb1  f5 16. O-O  Nxg3 17. hxg3  Bf6 18. e4  Bxc3 19. bxc3  Qxa3 20. exf5  exf5 21. Rfe1  Qa5 22. g4  Qc7 23. Nh4  g5 24. Nxf5  Bxf5 25. gxf5  Rf6 26. Re6  Raf8 27. Rxf6  Rxf6 28. Ba2+  Kf8 29. Qd3  Ne5 30. Qe4  Rd6 31. Qb4  Ke7 32. f6+  Kd7 33. Re1  Rxf6 34. Qd4+  Qd6 35. Qxe5  Qxe5 36. Rxe5  Rc6 37. Re3 1-0
+
+
+[Event "2020-tata-steel-masters"]
+[White "Duda, Jan-Krzysztof"]
+[Black "Carlsen, Magnus"]
+[WhiteFideId "1170546"]
+[BlackFideId "1503014"]
+[Result "1/2-1/2"]
+[Round "11"]
+[Date "Fri Jan 24 2020"]
+[WhiteClock "0:46:22"]
+[BlackClock "0:45:34"]
+
+
+1. e4  e5 2. Nf3  Nc6 3. Bc4  Bc5 4. c3  Nf6 5. d3  d6 6. Nbd2  a6 7. Nf1  h6 8. Ng3  O-O 9. O-O  Ba7 10. Bb3  Re8 11. h3  Be6 12. Bc2  d5 13. exd5  Nxd5 14. Re1  Qd6 15. Nh4  Qe7 16. Nhf5  Qf6 17. Qf3  g6 18. Nxh6+  Kg7 19. Qxf6+  Nxf6 20. Ne4  Nh7 21. g4  f5 22. gxf5  gxf5 23. Ng3  f4 24. Ngf5+  Kg6 25. d4  Ng5 26. Kg2  Bd5+ 27. Kf1  Nf3 28. Rd1  Rad8 29. Ne7+  Kxh6 30. Nxd5  Nfxd4 31. cxd4  Rxd5 32. dxe5  Rxd1+ 33. Bxd1  Kg5 34. h4+  Kf5 35. Bc2+  Kg4 36. Bd1+  f3 37. Bg5  Nxe5 38. Bc2  Nc4 39. Re1  Rxe1+ 40. Kxe1  Nxb2 41. Bf6  Nc4 42. Bg6  Bc5 43. Bf7  Kf5 1/2-1/2
+
+
+[Event "2020-tata-steel-masters"]
+[White "Carlsen, Magnus"]
+[Black "Artemiev, Vladislav"]
+[WhiteFideId "1503014"]
+[BlackFideId "24101605"]
+[Result "1/2-1/2"]
+[Round "12"]
+[Date "Sat Jan 25 2020"]
+[WhiteClock "0:20:30"]
+[BlackClock "0:04:41"]
+
+
+1. d4  Nf6 2. c4  g6 3. Nc3  d5 4. cxd5  Nxd5 5. e4  Nxc3 6. bxc3  Bg7 7. Be3  c5 8. Rc1  Qa5 9. Qd2  O-O 10. Nf3  Rd8 11. Be2  cxd4 12. cxd4  Qxd2+ 13. Bxd2  Na6 14. Be3  Bg4 15. Ne5  Bxe2 16. Kxe2  f5 17. Kf3  Rac8 18. h4  Nb4 19. exf5  gxf5 20. Rxc8  Rxc8 21. Rb1  a5 22. a3  Nd5 23. Rb5  e6 24. Rxa5  Bxe5 25. dxe5  Rc3 26. Ke2  Nxe3 27. fxe3  Rb3 28. Kf3  Kg7 29. g3  Kg6 30. a4  Rb4 31. Ra7  h6 32. Ra8  Re4 33. Ra5  Rb4 34. Ra7  Kh5 35. Ra8  Re4 36. Ra5  Rc4 37. Ra7 1/2-1/2
+
+
+[Event "2020-tata-steel-masters"]
+[White "So, Wesley"]
+[Black "Carlsen, Magnus"]
+[WhiteFideId "5202213"]
+[BlackFideId "1503014"]
+[Result "1/2-1/2"]
+[Round "13"]
+[Date "Sun Jan 26 2020"]
+[WhiteClock "2:02:13"]
+[BlackClock "2:03:43"]
+
+
+1. e4  e5 2. Nf3  Nc6 3. Nc3  Nf6 4. d4  exd4 5. Nxd4  Bb4 6. Nxc6  bxc6 7. Bd3  d5 8. Bd2  O-O 9. O-O  Bxc3 10. Bxc3  dxe4 11. Bxf6  Qxf6 12. Bxe4  Qxb2 13. Bxc6  Rb8 14. Rb1  Qxb1 15. Qxb1  Rxb1 16. Rxb1  Rd8 17. Bf3  Kf8 18. Rb8  Re8 19. h4  Ba6 20. Rb3  Be2 21. Bxe2  Rxe2 22. Rc3  Re7 23. f3  Ke8 24. Kf2  Kd7 25. Ra3  Re5 26. Rxa7  Rc5 27. Ke3  Rxc2 28. g4  h5 29. gxh5  Rc4 30. Ra5  Rxh4 31. Rg5  Ke6 32. Rc5  Ra4 33. h6  gxh6 34. Rxc7  Kf6 35. Rc6+  Kg7 36. Rc2  Kg6 37. Kf2  h5 38. Kg3  Kg5 39. Rc7  h4+ 40. Kh3  f5 41. Rh7  Rc4 42. Rh8  Rc1 43. a3  Kf4 44. Rh5  Ra1 45. a4  Ra2 46. Rxh4+  Kxf3 47. Rb4  f4 48. Rb3+  Kf2 49. Kg4  Rxa4 50. Rf3+  Kg2 51. Rxf4  Rxf4+ 52. Kxf4 1/2-1/2
+
+
+[Event "81st Tata Steel GpA"]
+[Site "Wijk aan Zee NED"]
+[Date "2019.01.14"]
+[Round "3.1"]
+[White "Vidit,S"]
+[Black "Carlsen,M"]
+[Result "1/2-1/2"]
+[BlackElo "2835"]
+[BlackFideId "1503014"]
+[BlackTitle "GM"]
+[ECO "E64"]
+[EventDate "2019.01.12"]
+[Opening "King's Indian"]
+[Variation "fianchetto, Yugoslav system"]
+[WhiteElo "2695"]
+[WhiteFideId "5029465"]
+[WhiteTitle "GM"]
+
+1. Nf3 Nf6 2. g3 g6 3. c4 Bg7 4. Bg2 O-O 5. Nc3 c5 6. d4 d6 7. dxc5 dxc5
+8. Qxd8 Rxd8 9. Ne5 Ne8 10. Nd3 Nd6 11. Bf4 Na6 12. Rc1 Bf5 13. O-O Bxd3
+14. exd3 Nb4 15. Rfd1 Rac8 16. a3 Nc6 17. Bxd6 Rxd6 18. Ne4 Re6 19. Nxc5 Re2
+20. b4 b6 21. Bxc6 Rxc6 22. Nb3 Ra2 23. d4 Rxa3 24. d5 Rc7 25. Nd4 Bxd4
+26. Rxd4 Ra4 27. c5 bxc5 28. Rdc4 Rd7 29. bxc5 Rxc4 30. Rxc4 Rxd5 31. c6 Rd8
+32. Ra4 Ra8 33. c7 Rc8 34. Rxa7 Kf8 35. g4 f6 36. Kg2 Ke8 37. Ra3 Rxc7
+38. Ra8+ Kf7 39. Rh8 Kg7 40. Re8 h6 41. Kg3 Ra7 42. Kg2 h5 43. gxh5 gxh5
+44. h4 e5 45. Rb8 Ra4 46. Kg3 Ra3+ 47. Kg2 Kg6 48. f3 Rd3 49. Rb6 Kf5
+50. Ra6 Rd8 51. Kg3 Rg8+ 52. Kf2 Re8 53. Kg3 Rd8 54. Kg2 Re8 55. Kg3 Re6
+56. Ra8 Rd6 57. Rh8 Kg6 58. Rg8+ Kh7 59. Re8 Kg7 60. Re7+ Kg6 61. Kh3 Kf5
+62. Kg3 Rd3 63. Re8 Rc3 64. Re7 Re3 65. Rh7 Kg6 66. Re7 Rd3 67. Kf2 Kf5
+68. Kg3 Rb3 69. Re8 Ra3 70. Re7 Rd3 71. Re8 Rd7 72. Ra8 Rg7+ 73. Kf2 Re7
+74. Kg3 Rb7 75. Rc8 Rb1 76. Rc6 Rg1+ 77. Kf2 Rg8 78. Ra6 Rb8 79. Kg3 Kg6
+80. Kg2 Rb2+ 81. Kg3 Rd2 82. Kh3 Kf7 83. Ra7+ Ke6 84. Ra6+ Rd6 85. Ra8 Rd3
+86. Kg2 Kf5 87. Ra6 Rd4 88. Kg3 Rb4 89. Ra8 e4 90. fxe4+ Rxe4 91. Rh8 Kg6
+92. Rg8+ Kh7 93. Ra8 Rb4 94. Rc8 Rg4+ 95. Kh3 Rg8 96. Rc1 Ra8 97. Rg1 Rg8
+98. Ra1 Kg6 99. Ra5 Rb8 100. Kg3 Rb3+ 101. Kg2 Re3 102. Rb5 Re5 103. Rb8 Kf5
+104. Kf3 Ra5 105. Rb3 Ra4 106. Rb5+ Kg6 107. Kg3 Rg4+ 108. Kh3 Re4 109. Kg3 Rg4+
+110. Kh3 Rg1 111. Kh2 Re1 112. Kg3 Re5 113. Rb3 Kf5 114. Kf3 Ra5 115. Rc3 Ra4
+116. Rc5+ Kg6 117. Kg3 Rg4+ 118. Kh3 Re4 119. Kg3 f5 120. Rc6+ Kg7 121. Rc7+ Kf6
+122. Rc6+ Re6 123. Rc4 Ke5 124. Rc5+ Ke4 125. Rc4+ Ke3 126. Rc3+ Kd4
+127. Rc8 Re4 128. Ra8 Rg4+ 129. Kf3 Ke5 130. Ra5+ Kf6 131. Ra6+
+1/2-1/2
+
+
+[Event "GRENKE Chess Classic 2019"]
+[Site "Karlsruhe/Baden Baden GER"]
+[Date "2019.04.28"]
+[Round "8.3"]
+[White "Svidler,P"]
+[Black "Carlsen,M"]
+[Result "0-1"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2735"]
+[BlackElo "2845"]
+[ECO "B30"]
+[Opening "Sicilian defence"]
+[WhiteFideId "4102142"]
+[BlackFideId "1503014"]
+[EventDate "2019.04.20"]
+
+1. e4 c5 2. Nf3 Nc6 3. Nc3 e5 4. Bc4 Be7 5. d3 d6 6. Nd2 Nf6 7. Nf1 Nd7 8. Nd5
+Nb6 9. Nxb6 axb6 10. c3 O-O 11. Ne3 Bg5 12. O-O Kh8 13. a3 f5 14. Nxf5 Bxc1 15.
+Rxc1 Bxf5 16. exf5 d5 17. Ba2 Rxf5 18. Qg4 Rf6 19. f4 exf4 20. Qg5 Qf8 21. Qxd5
+Rd8 22. Qf3 Ne5 23. Qe4 Ng4 24. Rce1 Ne3 25. Rf2 Re8 26. Qxb7 g5 27. Rfe2 g4 28.
+Rf2 Qh6 29. Qc7 Ref8 30. h3 gxh3 31. g3 fxg3 32. Rxf6 h2+ 33. Kh1 g2# 0-1
+
+
+[Event "Cote d'Ivoire Rapid 2019"]
+[Site "Abidjan CIV"]
+[Date "2019.05.08"]
+[Round "2.3"]
+[White "Nepomniachtchi,I"]
+[Black "Carlsen,M"]
+[Result "0-1"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2773"]
+[BlackElo "2861"]
+[ECO "B32"]
+[Opening "Sicilian"]
+[Variation "Labourdonnais-Loewenthal (Kalashnikov) variation"]
+[WhiteFideId "4168119"]
+[BlackFideId "1503014"]
+[EventDate "2019.05.08"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 e5 5. Nb5 d6 6. N1c3 a6 7. Na3 Be7 8. g3
+Nf6 9. Bg2 b5 10. Nd5 Nxd5 11. exd5 Nb8 12. O-O Nd7 13. c4 O-O 14. cxb5 axb5 15.
+Nc2 f5 16. Nb4 Bf6 17. Nc6 Qe8 18. a4 Nc5 19. Be3 Nxa4 20. Qc2 Bd7 21. b3 f4 22.
+bxa4 fxe3 23. axb5 Rxa1 24. Rxa1 Bg5 25. b6 exf2+ 26. Kh1 Bc8 27. Rf1 Qf7 28.
+Qe2 e4 29. h4 e3 30. hxg5 Re8 31. Kh2 Bg4 32. Qxg4 e2 33. b7 Qxb7 34. Rxf2 e1=Q
+35. Qf5 Qe3 36. Rf3 Qe2 37. Nd4 Qe5 38. Qg4 Qbxd5 39. Nf5 Qde6 40. Qh5 Qg6 41.
+Qg4 h5 42. Qc4+ d5 43. Qb5 Qxg5 44. Qd7 h4 45. Rf1 hxg3+ 46. Kg1 g6 47. Bxd5+
+Kh8 0-1
+
+
+[Event "Cote d'Ivoire Blitz 2019"]
+[Site "Abidjan CIV"]
+[Date "2019.05.12"]
+[Round "18.1"]
+[White "Nakamura,Hi"]
+[Black "Carlsen,M"]
+[Result "0-1"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2761"]
+[BlackElo "2861"]
+[ECO "D30"]
+[Opening "Queen's gambit declined"]
+[WhiteFideId "2016192"]
+[BlackFideId "1503014"]
+[EventDate "2019.05.11"]
+
+1. d4 d5 2. c4 e6 3. Nf3 a6 4. Bg5 Be7 5. Bxe7 Qxe7 6. e3 Nf6 7. Nc3 O-O 8. Rc1
+Rd8 9. Qc2 dxc4 10. Bxc4 c5 11. dxc5 Qxc5 12. Bd3 Nc6 13. a3 Ne5 14. Nxe5 Qxe5
+15. Ne4 Bd7 16. Nxf6+ Qxf6 17. O-O Rac8 18. Qb1 Rxc1 19. Rxc1 g6 20. Be4 Bb5 21.
+Qc2 b6 22. g3 Qe5 23. Bf3 a5 24. h4 h6 25. Qc7 Qxc7 26. Rxc7 Rd6 27. Rb7 Kg7 28.
+Kg2 Kf6 29. g4 g5 30. hxg5+ hxg5 31. Kg3 a4 32. Bg2 Bc4 33. Be4 b5 34. f4 e5 35.
+Rc7 exf4+ 36. exf4 Rd2 37. Rc6+ Kg7 38. fxg5 Rxb2 39. g6 Rb3+ 40. Kf4 Rxa3 41.
+gxf7 Ra1 42. Rc8 Bxf7 43. Rc7 a3 44. Kg5 Rd1 45. Bc2 Rc1 0-1
+
+
+[Event "Lindores Abbey Stars"]
+[Site "Cupar SCO"]
+[Date "2019.05.26"]
+[Round "6.2"]
+[White "Ding Liren"]
+[Black "Carlsen,M"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2805"]
+[BlackElo "2861"]
+[ECO "D30"]
+[Opening "Queen's gambit declined"]
+[WhiteFideId "8603677"]
+[BlackFideId "1503014"]
+[EventDate "2019.05.25"]
+
+1. d4 d5 2. c4 e6 3. Nf3 a6 4. Bg5 Be7 5. Bxe7 Qxe7 6. Nbd2 Nf6 7. g3 O-O 8. Bg2
+b6 9. cxd5 exd5 10. O-O Bb7 11. Rc1 a5 12. Re1 c5 13. dxc5 bxc5 14. e4 Nxe4 15.
+Nh4 Qf6 16. Nxe4 dxe4 17. Rxc5 Na6 18. Rxa5 Qxb2 19. Bxe4 Bxe4 20. Rxe4 Rad8 21.
+Rd5 Rxd5 22. Qxd5 Nb4 23. Qb3 Qxb3 24. axb3 Rb8 25. Nf3 Kf8 26. Kf1 Nd5 27. Nd2
+g6 28. Rd4 Nb4 29. Ke2 Ke7 30. Re4+ Kd7 31. Ke3 Rb5 32. Kd4 Rd5+ 33. Kc3 Rd3+
+34. Kxb4 Rxd2 35. Rf4 f5 36. Kc5 Kc7 37. b4 Kb7 38. h4 h5 39. Rf3 Rc2+ 40. Kd5
+Re2 41. Kc5 Rc2+ 42. Kd4 Re2 43. Kd5 Kb6 44. Rf4 Kb5 45. Kd6 Kb6 46. f3 Kb5 47.
+Kd5 Rg2 48. Ke5 Rxg3 49. Kf6 Ka4 50. Kg7 Kb5 51. Kh6 Ka4 52. Rd4 Kb5 53. Rd6
+Kxb4 54. Rxg6 Rxf3 55. Kxh5 Kc5 56. Rf6 Kd5 57. Kg6 Ke5 58. h5 Rg3+ 59. Kf7 f4
+60. h6 Rh3 61. Kg7 f3 62. Rf8 Rg3+ 63. Kh8 Ke4 64. h7 Ke3 65. Rxf3+ Kxf3 1/2-1/2
+
+
+[Event "Croatia GCT 2019"]
+[Site "Zagreb CRO"]
+[Date "2019.06.28"]
+[Round "3.1"]
+[White "Caruana,F"]
+[Black "Carlsen,M"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2819"]
+[BlackElo "2875"]
+[ECO "C80"]
+[Opening "Ruy Lopez"]
+[Variation "open, 6.d4"]
+[WhiteFideId "2020009"]
+[BlackFideId "1503014"]
+[EventDate "2019.06.26"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Nxe4 6. d4 Be7 7. Re1 b5 8. Rxe4
+d5 9. Nxe5 Nxe5 10. Rxe5 bxa4 11. Nc3 O-O 12. Re1 Bd6 13. Qh5 a3 14. Nxd5 axb2
+15. Bxb2 Rb8 16. Rab1 Re8 17. Ne3 Bf4 18. d5 Rb4 19. c4 Bxe3 20. Rxe3 Rxe3 21.
+fxe3 Rxc4 22. Bd4 c5 23. Ba1 f6 24. h3 Qe7 25. Qf3 h6 26. Re1 Re4 27. Kf2 Bd7
+28. Rd1 Kh7 29. Rd2 Qe8 30. Bb2 Ra4 31. a3 Rc4 32. Re2 Qg6 33. e4 Ba4 34. d6 Bc6
+35. Qg3 Qxg3+ 36. Kxg3 Kg6 37. e5 fxe5 38. Bxe5 h5 39. Bb2 h4+ 40. Kh2 Kf5 41.
+Bxg7 Re4 42. Rxe4 Kxe4 43. Bf6 c4 44. Bxh4 c3 45. Bf6 c2 46. Bb2 Kd5 47. g4 Kxd6
+48. Kg3 Bb5 49. Kf3 Ke7 50. h4 Kf8 51. h5 Be8 52. Kg3 Kg8 53. Kh4 Kh7 54. Kg5
+Bd7 55. Kf4 a5 56. Kg5 a4 57. Kf4 Be6 58. g5 Bf7 59. g6+ Bxg6 60. hxg6+ Kxg6 61.
+Ke5 Kf7 62. Kd6 Ke8 63. Bc1 Kd8 64. Kc6 Kc8 65. Bf4 c1=Q+ 66. Bxc1 Kb8 67. Kb6
+Ka8 68. Bf4 1/2-1/2
+
+
+[Event "Saint Louis Rapid 2019"]
+[Site "Saint Louis USA"]
+[Date "2019.08.11"]
+[Round "4.1"]
+[White "Caruana,F"]
+[Black "Carlsen,M"]
+[Result "1-0"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2818"]
+[BlackElo "2882"]
+[ECO "B30"]
+[Opening "Sicilian"]
+[Variation "Nimzovich-Rossolimo attack (without ...d6)"]
+[WhiteFideId "2020009"]
+[BlackFideId "1503014"]
+[EventDate "2019.08.10"]
+
+1. e4 c5 2. Nf3 Nc6 3. Bb5 e6 4. Bxc6 bxc6 5. d3 Ne7 6. b3 Ng6 7. h4 h5 8. e5 f6
+9. Nbd2 d6 10. exd6 e5 11. Bb2 Bg4 12. Qe2 Qxd6 13. g3 Be7 14. O-O-O Nf8 15.
+Rde1 Ne6 16. Qe4 Qd5 17. Nxe5 Qxe4 18. dxe4 fxe5 19. f3 Nd4 20. fxg4 hxg4 21.
+Nc4 O-O 22. Kb1 Rf2 23. Nxe5 Nxc2 24. Nxg4 Rg2 25. Reg1 Re2 26. h5 c4 27. h6 c3
+28. h7+ Kf7 29. Rf1+ Bf6 30. Bc1 Nb4 31. e5 Rxa2 32. Ne3 Rh8 33. exf6 g5 34. Rd1
+a5 35. Rd4 c2+ 36. Nxc2 Rxc2 37. Rxb4 Rxc1+ 38. Kxc1 axb4 39. Rh6 1-0
+
+
+[Event "Saint Louis Blitz 2019"]
+[Site "Saint Louis USA"]
+[Date "2019.08.14"]
+[Round "18.2"]
+[White "Rapport,R"]
+[Black "Carlsen,M"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2747"]
+[BlackElo "2882"]
+[ECO "A80"]
+[Opening "Dutch"]
+[WhiteFideId "738590"]
+[BlackFideId "1503014"]
+[EventDate "2019.08.13"]
+
+1. d4 f5 2. b3 Nf6 3. Bb2 e6 4. e3 b6 5. Nf3 Bb7 6. Be2 Be7 7. O-O O-O 8. c4 Ne4
+9. Nfd2 Nxd2 10. Qxd2 d6 11. Nc3 Nd7 12. f4 c5 13. d5 e5 14. e4 exf4 15. Qxf4
+fxe4 16. Qxe4 Bf6 17. Bd3 Bd4+ 18. Kh1 Rxf1+ 19. Rxf1 Nf6 20. Qe2 Qe8 21. Qd2
+Qe5 22. Re1 Qh5 23. Be2 Qh4 24. g3 Qh3 25. Bf3 Rf8 26. Qe2 Bc8 27. Bg2 Qh6 28.
+Bc1 Qg6 29. Nb5 Be5 30. Bb2 Bxb2 31. Qxb2 Ng4 32. Qe2 a6 33. Nc7 Qh6 34. h4 Ne5
+35. Ne6 Rf6 36. Rf1 Bd7 37. Rxf6 Qxf6 38. Bh3 b5 39. Nf4 Bxh3 40. Nxh3 bxc4 41.
+bxc4 Qf3+ 42. Qxf3 Nxf3 43. Kg2 Ne5 44. Ng5 Nxc4 45. Ne4 Kf7 46. Kf3 Ke7 47. Ng5
+Nb6 48. Ke4 h6 49. Ne6 g6 50. g4 Nd7 51. g5 h5 52. Nc7 a5 53. Ne6 a4 54. Nf4 Ne5
+55. Ne2 a3 56. Nc3 Kd7 57. Nb5 Nc4 58. Kd3 Nb6 59. Ke4 Na4 60. Kd3 Nb6 61. Ke4 1/2-1/2
+
+
+[Event "7th Sinquefield Cup 2019"]
+[Site "Saint Louis USA"]
+[Date "2019.08.20"]
+[Round "4.2"]
+[White "Mamedyarov,S"]
+[Black "Carlsen,M"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2764"]
+[BlackElo "2882"]
+[ECO "D45"]
+[Opening "QGD semi-Slav"]
+[Variation "Stoltz variation"]
+[WhiteFideId "13401319"]
+[BlackFideId "1503014"]
+[EventDate "2019.08.17"]
+
+1. d4 d5 2. c4 c6 3. Nc3 Nf6 4. e3 e6 5. Nf3 Nbd7 6. Qc2 Bd6 7. Bd3 dxc4 8. Bxc4
+b5 9. Be2 O-O 10. O-O a6 11. Rd1 Qc7 12. e4 e5 13. g3 Re8 14. a3 exd4 15. Nxd4
+Be5 16. Bf3 c5 17. Nde2 Bb7 18. Be3 c4 19. b4 cxb3 20. Qxb3 Nc5 21. Bxc5 Qxc5
+22. Rac1 Qb6 23. Na4 Qa7 24. Nc5 Rac8 25. Nd7 Rxc1 26. Nxc1 h6 27. Nxf6+ Bxf6
+28. Rd7 Re7 29. Rd8+ Kh7 30. Qd3 Be5 31. Rh8+ Kxh8 32. Qd8+ Kh7 33. Qxe7 Bd4 34.
+Qxf7 Bxf2+ 35. Kg2 Bc8 36. Qa2 Bb6 37. e5 Bf5 38. g4 Bg6 39. Ne2 Qc7 40. Nf4
+Qc2+ 41. Qxc2 Bxc2 42. Nd5 Bc5 43. Nb4 Bb3 44. Nxa6 Bxa3 45. Nc7 Bc4 46. e6 Bd6
+47. Bc6 b4 48. Nd5 Kg6 49. e7 Bxd5+ 50. Bxd5 Bxe7 51. Kf3 Kf6 52. Ke4 Kg5 53.
+Kf3 Kh4 54. Be6 Bg5 55. Kg2 Bf4 56. h3 Kg5 57. Kf3 Kf6 58. Bg8 Ke5 59. h4 g5 60.
+hxg5 hxg5 61. Ke2 Kd4 62. Kd1 Kc3 63. Bf7 b3 64. Be6 Be3 65. Bf7 Bf4 66. Be6 Be3
+67. Bf7 Bf4 68. Be6 1/2-1/2
+
+
+[Event "11th London Classic 2019"]
+[Site "London ENG"]
+[Date "2019.12.07"]
+[Round "2.2"]
+[White "Aronian,L"]
+[Black "Carlsen,M"]
+[Result "1/2-1/2"]
+[BlackElo "2872"]
+[BlackFideId "1503014"]
+[BlackTitle "GM"]
+[ECO "E60"]
+[EventDate "2019.12.02"]
+[Opening "King's Indian defence"]
+[WhiteElo "2775"]
+[WhiteFideId "13300474"]
+[WhiteTitle "GM"]
+
+1. d4 Nf6 2. c4 g6 3. f3 Nc6 4. d5 Ne5 5. e4 d6 6. Nc3 Bg7 7. f4 Ned7 8. Be3 O-O
+9. Be2 e6 10. dxe6 fxe6 11. h4 b5 12. cxb5 Bb7 13. Qb3 Kh8 14. Bf3 e5
+15. Nh3 Nh5 16. Bxh5 gxh5 17. f5 Nf6 18. Nf2 a6 19. b6 cxb6 20. Bxb6 Qd7
+21. Rd1 Rac8 22. Be3 h6 23. Rh3 d5 24. exd5 Ba8 25. Rf3 Rb8 26. Qc2 Rfc8
+27. Qe2 Qf7 28. Qd2 Kh7 29. Nfe4 Nxe4 30. Nxe4 Rd8 31. f6 Bf8 32. Qc2 Kh8
+33. Nc3 Rb4 34. Qf2 Bxd5 35. Bc5 Rd4 36. Bxd4 Bxf3 37. gxf3 exd4 38. Rxd4 Rb8
+39. Qh2 Rb6 40. Nd5 Qe6+ 41. Qe2 Qg8 42. Kf1 Re6 43. f7 Qxf7 44. Rf4 Qg6
+45. Rxf8+ Kg7 46. Qd1 Kxf8 47. Nf4 Qe8 48. Nxe6+ Qxe6 49. Qd8+ Kf7 50. Qc7+ Ke8
+51. Qb8+ Kd7 52. Qb7+ Kd8 53. Qb8+ Kd7 54. Qa7+ Ke8 55. b3 Qh3+ 56. Ke2 Qxh4
+57. Qb8+ Ke7 58. Qc7+ Kf8 59. Qc5+ Kg7 60. Qe5+ Kg8 61. a4 Qh1 62. Qb8+ Kf7
+63. Qf4+ Ke8 64. Qb8+ Kd7 65. Qa7+ Kd8 66. Qd4+ Ke8 67. Qe5+ Kd7 68. Qd4+ Ke8
+69. b4 Qg2+ 70. Qf2 Qg5 71. f4 Qd5 72. Qe3+ Kf7 73. Qa7+ Ke8 74. Qc5 Qa2+
+75. Kf3 Qxa4 76. Qxh5+ Ke7 77. Qe5+ Kf7 78. Qd5+ Kg7 79. Qd4+ Kf7 80. Qd5+ Kg7
+81. Qd4+ Kf7
+1/2-1/2
