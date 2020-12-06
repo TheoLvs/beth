@@ -28,5 +28,8 @@ The goal is to create:
 - https://python-chess.readthedocs.io/en
 
 ### Game Databases
+- https://www.chess.com/games/
+- https://www.kaggle.com/datasnaek/chess
+
 
 
