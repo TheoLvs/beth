@@ -118,6 +118,8 @@ class Game:
         """
         if self.board.is_checkmate():
             return True
+        elif self.board.is_stalemate():
+            return True
         elif self.board.is_fivefold_repetition():
             return True
         elif self.board.is_seventyfive_moves():
