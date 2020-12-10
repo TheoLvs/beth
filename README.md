@@ -38,5 +38,8 @@ The goal is to create:
 - https://www.chess.com/games/
 - https://www.kaggle.com/datasnaek/chess
 
+### State of the art approaches
+- https://ai.facebook.com/blog/rebel-a-general-game-playing-ai-bot-that-excels-at-poker-and-more/
+  
 
 

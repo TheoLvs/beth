@@ -1,49 +1,44 @@
-
 import chess
 from ipywidgets import widgets
 from IPython.display import display
 from .players.human_player import HumanPlayer
 
 
-
 class Game:
+    def __init__(self, white=None, black=None):
 
-    def __init__(self,white = None,black = None):
-
-        self.init_game(white,black)
-
+        self.init_game(white, black)
 
     def _repr_html_(self):
         return self.board._repr_html_()
 
+    def init_game(self, white=None, black=None):
 
-    def init_game(self,white = None,black = None):
-        
         # Init board
         self.board = chess.Board()
 
         # Init Human Players if no player type is specified
-        if white is None: white = HumanPlayer()
-        if black is None: black = HumanPlayer()
+        if white is None:
+            white = HumanPlayer()
+        if black is None:
+            black = HumanPlayer()
 
         # Store as attributes
         self.white = white
         self.black = black
 
         # Bind each player with the board as well to retrieve the moves
-        self.white.bind(self.board,"WHITE")
-        self.black.bind(self.board,"BLACK")
-    
+        self.white.bind(self.board, "WHITE")
+        self.black.bind(self.board, "BLACK")
 
-    def reset_game(self,white = None,black = None):
+    def reset_game(self, white=None, black=None):
 
         # Init board
         self.board = chess.Board()
 
         # Bind each player with the board as well to retrieve the moves
-        self.white.bind(self.board,"WHITE")
-        self.black.bind(self.board,"BLACK")
-    
+        self.white.bind(self.board, "WHITE")
+        self.black.bind(self.board, "BLACK")
 
     @property
     def turn(self):
@@ -53,10 +48,10 @@ class Game:
     def other_turn(self):
         return "BLACK" if self.board.turn else "WHITE"
 
-    
     def get_turn_description(self):
-        return f"Next is {self.turn} - {self.other_turn} has played {self.get_last_move()}"
-
+        return (
+            f"Next is {self.turn} - {self.other_turn} has played {self.get_last_move()}"
+        )
 
     def get_last_move(self):
         return str(self.get_moves()[-1])
@@ -64,14 +59,12 @@ class Game:
     def get_moves(self):
         return self.board.move_stack
 
-
-    def move(self,value = None):
+    def move(self, value=None):
 
         if self.turn == "WHITE":
             return self.white.move(value)
         else:
             return self.black.move(value)
-
 
     def notebook_play(self):
 
@@ -82,7 +75,7 @@ class Game:
 
         # Define output and display everything
         output = widgets.Output()
-        display(inputs,output)
+        display(inputs, output)
 
         with output:
             print("Next is WHITE")
@@ -102,7 +95,6 @@ class Game:
                     display(self.board)
 
         button.on_click(on_button_clicked)
-
 
     def done(self):
         """Indicator if the game is finished
@@ -127,8 +119,7 @@ class Game:
         else:
             return False
 
-
-    def run(self,render = True):
+    def run(self, render=True):
 
         # Init and display ouput
         output = widgets.Output()
@@ -138,12 +129,13 @@ class Game:
         game_loop = True
 
         while game_loop:
-            
+
             with output:
 
-                # Display and one player move 
+                # Display and one player move
                 try:
-                    if render: display(self.board)
+                    if render:
+                        display(self.board)
                     self.move()
 
                 # Stop on Keyboard Interrupt (debug in notebook)
@@ -157,21 +149,21 @@ class Game:
                     # Restart input only if different than exit
                     # If exit stops the execution (debug in notebook)
                     if "invalid san" in str(e):
-                        move = str(e).split(": ")[1].replace("'","")
+                        move = str(e).split(": ")[1].replace("'", "")
                         if move == "exit":
                             game_loop = False
 
                     # For any other errors, stop the loop and raise the exception
                     else:
                         game_loop = False
-                        raise 
+                        raise
 
             # Stop if the game is done
             if self.done():
                 game_loop = False
 
-            # Clear the output to simulate an animation        
-            output.clear_output(wait = True)
+            # Clear the output to simulate an animation
+            output.clear_output(wait=True)
 
         with output:
             display(self.board)
