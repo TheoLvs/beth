@@ -14,27 +14,27 @@ The goal is to create:
 
 
 ## Features
-### Already developed
+### Environment
 
-- [ x ] Experimenting with the [python chess](https://python-chess.readthedocs.io/en) library
-- [ x ] Implementing ``Game`` framework
-- [ x ] ``HumanPlayer`` to play chess in Jupyter notebook
-- [ x ] ``RandomPlayer`` the most simple bot to easily test out new ideas and debug
+- [x] Experimenting with the [python chess](https://python-chess.readthedocs.io/en) library
+- [x] Implementing ``Game`` framework
+- [x] ``HumanPlayer`` to play chess in Jupyter notebook
+- [x] ``RandomPlayer`` the most simple bot to easily test out new ideas and debug
+- [ ] Read PGN files and load into ML algorithms
+- [ ] Measure ELO of an algorithm, or any metric of performance
 
+### Model utils
+- [ ] Monitor algorithm performance using Comet.ml / tensorboard
+- [ ] Saving algorithm weights to be reused
+- [ ] Visualize probabilities to see best moves and if training worked
 
-### Roadmap
-##### Utils
-- Read PGN files and load into ML algorithms
-- Measure ELO of an algorithm, or any metric of performance
-- Monitor algorithm performance using Comet.ml / tensorboard
-
-##### Algorithms & approaches
-- AlphaGo approach: value function and policy function evaluation using Reinforcement Learning & MCTS
-- AlphaZero approach: self play competition
-- NLP approach: predicting next move using NLP techniques (LSTM, Transformers)
-  - LSTM / RNN / GRU
-  - Transformers
-- GameAI techniques
+### Algorithms & approaches
+- [ ] AlphaGo approach: value function and policy function evaluation using Reinforcement Learning & MCTS
+- [ ] AlphaZero approach: self play competition
+- [ ] NLP approach: predicting next move using NLP techniques (LSTM, Transformers)
+  - [ ] LSTM / RNN / GRU
+  - [ ] Transformers
+- [ ] GameAI techniques (minimax, rules-based)
 
 ## References
 - https://python-chess.readthedocs.io/en
