@@ -15,18 +15,26 @@ The goal is to create:
 
 ## Features
 ### Already developed
-- Experimenting with the [python chess](https://python-chess.readthedocs.io/en) library
-- Implementing ``Game`` framework
-- ``HumanPlayer`` to play chess in Jupyter notebook
-- ``RandomPlayer`` the most simple bot to easily test out new ideas and debug
+
+- [ x ] Experimenting with the [python chess](https://python-chess.readthedocs.io/en) library
+- [ x ] Implementing ``Game`` framework
+- [ x ] ``HumanPlayer`` to play chess in Jupyter notebook
+- [ x ] ``RandomPlayer`` the most simple bot to easily test out new ideas and debug
+
+
 ### Roadmap
 ##### Utils
 - Read PGN files and load into ML algorithms
+- Measure ELO of an algorithm, or any metric of performance
+- Monitor algorithm performance using Comet.ml / tensorboard
 
 ##### Algorithms & approaches
 - AlphaGo approach: value function and policy function evaluation using Reinforcement Learning & MCTS
 - AlphaZero approach: self play competition
 - NLP approach: predicting next move using NLP techniques (LSTM, Transformers)
+  - LSTM / RNN / GRU
+  - Transformers
+- GameAI techniques
 
 ## References
 - https://python-chess.readthedocs.io/en
@@ -41,5 +49,9 @@ The goal is to create:
 ### State of the art approaches
 - https://ai.facebook.com/blog/rebel-a-general-game-playing-ai-bot-that-excels-at-poker-and-more/
   
+
+### Libraries
+- Deep Learning ``jax, trax, rlax, haiku and pytorch-lightning``
+- Monitoring (comet.ml, [livelossplot](https://github.com/stared/livelossplot), [tensorboard](https://pytorch.org/tutorials/recipes/recipes/tensorboard_with_pytorch.html))
 
 
