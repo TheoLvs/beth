@@ -10,7 +10,7 @@ The goal is to create:
 - Auto-guide to help human learn and improve at playing chess
 - Adaptive AI to match the player ELO and make him improve
 
-> This repo is under active development
+> This repo is **under active development**
 
 
 ## Features
@@ -21,12 +21,14 @@ The goal is to create:
 - [x] ``HumanPlayer`` to play chess in Jupyter notebook
 - [x] ``RandomPlayer`` the most simple bot to easily test out new ideas and debug
 - [ ] Read PGN files and load into ML algorithms
-- [ ] Measure ELO of an algorithm, or any metric of performance
+- [ ] Measure ELO of an algorithm/AI, or any consistant metric of performance
+- [ ] Saving game as gif or video
 
 ### Model utils
 - [ ] Monitor algorithm performance using Comet.ml / tensorboard
 - [ ] Saving algorithm weights to be reused
 - [ ] Visualize probabilities to see best moves and if training worked
+- [ ] Transform game object into 3D tensor (2D dimension + one hot encoding of pieces positions)
 
 ### Algorithms & approaches
 - [ ] AlphaGo approach: value function and policy function evaluation using Reinforcement Learning & MCTS
@@ -34,10 +36,15 @@ The goal is to create:
 - [ ] NLP approach: predicting next move using NLP techniques (LSTM, Transformers)
   - [ ] LSTM / RNN / GRU
   - [ ] Transformers
+- [ ] Hybrid techniques with both NLP-like + modeling the game as 3D tensor 
 - [ ] GameAI techniques (minimax, rules-based)
+  - [ ] Super simple approach where at each step Random Play from a PGN file or list of moves. 
+- [ ] Test connection to Game engines like stockfish
 
 ## References
 - https://python-chess.readthedocs.io/en
+- https://lichess.org/
+- https://www.chess.com/games/
 
 ### Sequential Deep Learning
 - https://pytorch.org/tutorials/beginner/transformer_tutorial.html

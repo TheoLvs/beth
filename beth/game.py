@@ -31,6 +31,7 @@ class Game:
         self.white.bind(self.board, "WHITE")
         self.black.bind(self.board, "BLACK")
 
+
     def reset_game(self, white=None, black=None):
 
         # Init board
@@ -167,3 +168,15 @@ class Game:
 
         with output:
             display(self.board)
+
+
+
+    def make_svg(self,size = 400,**kwargs):
+        svg_board = chess.svg.board(board = self.board,size = size,**kwargs)
+        return svg_board
+
+
+    def save_svg(self,filepath,size = 400):
+        svg_board = self.make_svg(size = size)
+        with open(filepath, "w") as file:
+            file.write(svg_board)

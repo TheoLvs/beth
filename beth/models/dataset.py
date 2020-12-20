@@ -7,12 +7,11 @@ import pandas as pd
 from collections import Counter
 
 class Dataset(torch.utils.data.Dataset):
-    def __init__(self,data,sequence_length = 50):
+    def __init__(self,data,**kwargs):
         super().__init__()
         self.data = data
         self.words = self.load_words(data)
         self.uniq_words = self.get_uniq_words()
-        self.sequence_length = sequence_length
 
         self.index_to_word = {index: word for index, word in enumerate(self.uniq_words)}
         self.word_to_index = {word: index for index, word in enumerate(self.uniq_words)}
