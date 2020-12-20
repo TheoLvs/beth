@@ -25,9 +25,9 @@ The goal is to create:
 - [ ] Saving game as gif or video
 
 ### Model utils
-- [ ] Monitor algorithm performance using Comet.ml / tensorboard
-- [ ] Saving algorithm weights to be reused
-- [ ] Visualize probabilities to see best moves and if training worked
+- [x] Monitor algorithm performance using Comet.ml / tensorboard
+- [x] Saving algorithm weights to be reused
+- [x] Visualize probabilities to see best moves and if training worked
 - [ ] Transform game object into 3D tensor (2D dimension + one hot encoding of pieces positions)
 
 ### Algorithms & approaches
