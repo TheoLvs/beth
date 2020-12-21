@@ -115,3 +115,26 @@ class LSTMModel(nn.Module):
             return probas
         else:
             return words
+
+
+
+    def predict_next(self,game):
+
+        # Get move stack at t and legal moves
+        move_stack = " ".join(["start"] + game.get_moves_san())
+        legal_moves = game.get_legal_moves_san()
+
+        print(move_stack)
+        print(legal_moves)
+
+        # Predict next move probabilities using LSTM
+        p = self.predict(move_stack,next_words = 1,as_proba = True)[0]
+
+        # Filter probas on legal_moves
+        p = p.loc[legal_moves].sort_values(ascending = False)
+        p /= p.sum()
+            
+        # Sample next move
+        selected_move = np.random.choice(p.index, p=p)
+
+        return selected_move

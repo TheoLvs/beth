@@ -9,8 +9,8 @@ class Player:
         if self.wait_duration is not None:
             time.sleep(self.wait_duration)
 
-    def bind(self, board, color):
-        self.board = board
+    def bind(self, game, color):
+        self.game = game
         self.color = color
 
     def move(self, value):

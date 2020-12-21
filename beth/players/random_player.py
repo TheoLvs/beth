@@ -8,6 +8,6 @@ class RandomPlayer(Player):
 
         self.wait()
 
-        moves = list(self.board.legal_moves)
+        moves = list(self.game.board.legal_moves)
         selected_move = random.choice(moves)
-        self.board.push(selected_move)
+        return selected_move

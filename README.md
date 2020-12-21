@@ -29,6 +29,8 @@ The goal is to create:
 - [x] Saving algorithm weights to be reused
 - [x] Visualize probabilities to see best moves and if training worked
 - [ ] Transform game object into 3D tensor (2D dimension + one hot encoding of pieces positions)
+- [ ] Install, test, and integrate CodeCarbon
+- [ ] Train on Google Colab
 
 ### Algorithms & approaches
 - [ ] AlphaGo approach: value function and policy function evaluation using Reinforcement Learning & MCTS
@@ -36,6 +38,7 @@ The goal is to create:
 - [ ] NLP approach: predicting next move using NLP techniques (LSTM, Transformers)
   - [ ] LSTM / RNN / GRU
   - [ ] Transformers
+  - [ ] Directly using Hugging Face ``transformers`` [library](https://huggingface.co/transformers/task_summary.html) 
 - [ ] Hybrid techniques with both NLP-like + modeling the game as 3D tensor 
 - [ ] GameAI techniques (minimax, rules-based)
   - [ ] Super simple approach where at each step Random Play from a PGN file or list of moves. 

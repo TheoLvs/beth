@@ -31,4 +31,4 @@ class SequencePlayer(Player):
 
         move = self.sequence[self.turn_number]
         self.turn_number += 1
-        self.board.push_san(move)
+        self.game.board.push_san(move)

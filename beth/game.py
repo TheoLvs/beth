@@ -9,9 +9,6 @@ class Game:
 
         self.init_game(white, black)
 
-    def _repr_html_(self):
-        return self.board._repr_html_()
-
     def init_game(self, white=None, black=None):
 
         # Init board
@@ -28,8 +25,11 @@ class Game:
         self.black = black
 
         # Bind each player with the board as well to retrieve the moves
-        self.white.bind(self.board, "WHITE")
-        self.black.bind(self.board, "BLACK")
+        self.white.bind(self, "WHITE")
+        self.black.bind(self, "BLACK")
+
+        # Stack moves
+        self.board.moves = []
 
 
     def reset_game(self, white=None, black=None):
@@ -38,8 +38,12 @@ class Game:
         self.board = chess.Board()
 
         # Bind each player with the board as well to retrieve the moves
-        self.white.bind(self.board, "WHITE")
-        self.black.bind(self.board, "BLACK")
+        self.white.bind(self, "WHITE")
+        self.black.bind(self, "BLACK")
+
+        # Stack moves
+        self.board.moves = []
+
 
     @property
     def turn(self):
@@ -60,12 +64,25 @@ class Game:
     def get_moves(self):
         return self.board.move_stack
 
+    def get_moves_san(self):
+        return self.board.moves
+
+    def get_legal_moves_san(self):
+        return [self.board.san(x) for x in self.board.legal_moves]
+
+
     def move(self, value=None):
 
         if self.turn == "WHITE":
-            return self.white.move(value)
+            move = self.white.move(value)
         else:
-            return self.black.move(value)
+            move = self.black.move(value)
+
+        san_move = self.board.parse_san(move)
+        san_move = self.board.san(san_move)
+
+        self.board.moves.append(san_move)
+        self.board.push_san(san_move)
 
     def notebook_play(self):
 
