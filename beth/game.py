@@ -145,6 +145,7 @@ class Game:
 
         # Run game loop
         game_loop = True
+        error = False
 
         while game_loop:
 
@@ -174,17 +175,23 @@ class Game:
                     # For any other errors, stop the loop and raise the exception
                     else:
                         game_loop = False
-                        raise
+                        error = True
+                        raise e
+            
+            # if not game_loop and error:
+            #     raise Exception
 
             # Stop if the game is done
             if self.done():
                 game_loop = False
 
             # Clear the output to simulate an animation
-            output.clear_output(wait=True)
+            if not error:
+                output.clear_output(wait=True)
 
-        with output:
-            display(self.board)
+        if not error:
+            with output:
+                display(self.board)
 
 
 
