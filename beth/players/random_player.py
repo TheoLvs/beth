@@ -9,5 +9,5 @@ class RandomPlayer(Player):
         self.wait()
 
         moves = list(self.game.board.legal_moves)
-        selected_move = random.choice(moves)
+        selected_move = str(random.choice(moves))
         return selected_move
