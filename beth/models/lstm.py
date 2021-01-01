@@ -11,7 +11,16 @@ from comet_ml import Experiment
 
 
 class LSTMModel(nn.Module):
-    def __init__(self, dataset,lstm_size = 128,embedding_dim = 128,num_layers = 3,dropout = 0.2,experiment = None,**kwargs):
+    def __init__(
+        self,
+        dataset,
+        lstm_size=128,
+        embedding_dim=128,
+        num_layers=3,
+        dropout=0.2,
+        experiment=None,
+        **kwargs,
+    ):
         super().__init__()
         self.lstm_size = lstm_size
         self.embedding_dim = embedding_dim
@@ -32,25 +41,33 @@ class LSTMModel(nn.Module):
         )
         self.fc = nn.Linear(self.lstm_size, n_vocab)
 
-
     def forward(self, x, prev_state):
         embed = self.embedding(x)
         output, state = self.lstm(embed, prev_state)
         logits = self.fc(output)
         return logits, state
 
-    def save_weights(self,filepath):
-        torch.save(self.state_dict(),filepath)
-    
-    def load_weights(self,filepath):
+    def save_weights(self, filepath):
+        torch.save(self.state_dict(), filepath)
+
+    def load_weights(self, filepath):
         self.load_state_dict(torch.load(filepath))
 
-    def init_state(self,sequence_length):
-        return (torch.zeros(self.num_layers, sequence_length, self.lstm_size),
-                torch.zeros(self.num_layers, sequence_length, self.lstm_size))
+    def init_state(self, sequence_length):
+        return (
+            torch.zeros(self.num_layers, sequence_length, self.lstm_size),
+            torch.zeros(self.num_layers, sequence_length, self.lstm_size),
+        )
 
-
-    def fit(self,sequence_length = 10,batch_size = 32,max_epochs = 100,lr = 0.001,writer = None,**kwargs):
+    def fit(
+        self,
+        sequence_length=10,
+        batch_size=32,
+        max_epochs=100,
+        lr=0.001,
+        writer=None,
+        **kwargs,
+    ):
 
         self.train()
 
@@ -65,7 +82,7 @@ class LSTMModel(nn.Module):
             for epoch in range(max_epochs):
                 state_h, state_c = self.init_state(self.dataset.sequence_length)
 
-                pbar = tqdm(dataloader,desc=f"Epoch {epoch}")
+                pbar = tqdm(dataloader, desc=f"Epoch {epoch}")
 
                 for batch, (x, y) in enumerate(pbar):
                     self.optimizer.zero_grad()
@@ -79,23 +96,20 @@ class LSTMModel(nn.Module):
                     loss.backward()
                     self.optimizer.step()
 
-
                     loss_value = loss.item()
 
                     if writer is not None:
                         writer.add_scalar("Loss/train", loss_value, epoch)
 
-                    pbar.set_postfix({'loss': loss_value })
-
+                    pbar.set_postfix({"loss": loss_value})
 
         except KeyboardInterrupt:
             print("... Stopped training in notebook")
 
-
-    def predict(self, text, next_words=1,as_proba = False):
+    def predict(self, text, next_words=1, as_proba=False):
         self.eval()
 
-        words = text.split(' ')
+        words = text.split(" ")
         state_h, state_c = self.init_state(len(words))
         probas = []
 
@@ -108,7 +122,6 @@ class LSTMModel(nn.Module):
             word_index = np.random.choice(len(last_word_logits), p=p)
             words.append(self.dataset.index_to_word[word_index])
 
-        
         if as_proba:
             probas = pd.DataFrame(probas).T
             probas.index = self.dataset.uniq_words
@@ -116,9 +129,7 @@ class LSTMModel(nn.Module):
         else:
             return words
 
-
-
-    def predict_next(self,game):
+    def predict_next(self, game):
 
         # Get move stack at t and legal moves
         move_stack = " ".join(["start"] + game.get_moves_san())
@@ -128,12 +139,12 @@ class LSTMModel(nn.Module):
         print(legal_moves)
 
         # Predict next move probabilities using LSTM
-        p = self.predict(move_stack,next_words = 1,as_proba = True)[0]
+        p = self.predict(move_stack, next_words=1, as_proba=True)[0]
 
         # Filter probas on legal_moves
-        p = p.loc[legal_moves].sort_values(ascending = False)
+        p = p.loc[legal_moves].sort_values(ascending=False)
         p /= p.sum()
-            
+
         # Sample next move
         selected_move = np.random.choice(p.index, p=p)
 

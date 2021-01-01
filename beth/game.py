@@ -31,7 +31,6 @@ class Game:
         # Stack moves
         self.board.moves = []
 
-
     def reset_game(self, white=None, black=None):
 
         # Init board
@@ -43,7 +42,6 @@ class Game:
 
         # Stack moves
         self.board.moves = []
-
 
     @property
     def turn(self):
@@ -69,7 +67,6 @@ class Game:
 
     def get_legal_moves_san(self):
         return [self.board.san(x) for x in self.board.legal_moves]
-
 
     def move(self, value=None):
 
@@ -186,14 +183,11 @@ class Game:
         with output:
             display(self.board)
 
-
-
-    def make_svg(self,size = 400,**kwargs):
-        svg_board = chess.svg.board(board = self.board,size = size,**kwargs)
+    def make_svg(self, size=400, **kwargs):
+        svg_board = chess.svg.board(board=self.board, size=size, **kwargs)
         return svg_board
 
-
-    def save_svg(self,filepath,size = 400):
-        svg_board = self.make_svg(size = size)
+    def save_svg(self, filepath, size=400):
+        svg_board = self.make_svg(size=size)
         with open(filepath, "w") as file:
             file.write(svg_board)

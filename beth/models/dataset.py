@@ -6,8 +6,9 @@ import torch
 import pandas as pd
 from collections import Counter
 
+
 class Dataset(torch.utils.data.Dataset):
-    def __init__(self,data,**kwargs):
+    def __init__(self, data, **kwargs):
         super().__init__()
         self.data = data
         self.words = self.load_words(data)
@@ -18,10 +19,9 @@ class Dataset(torch.utils.data.Dataset):
 
         self.words_indexes = [self.word_to_index[w] for w in self.words]
 
-
-    def load_words(self,data):
-        text = data.str.cat(sep=' ')
-        return text.split(' ')
+    def load_words(self, data):
+        text = data.str.cat(sep=" ")
+        return text.split(" ")
 
     def get_uniq_words(self):
         word_counts = Counter(self.words)
@@ -32,6 +32,8 @@ class Dataset(torch.utils.data.Dataset):
 
     def __getitem__(self, index):
         return (
-            torch.tensor(self.words_indexes[index:index+self.sequence_length]),
-            torch.tensor(self.words_indexes[index+1:index+self.sequence_length+1]),
+            torch.tensor(self.words_indexes[index : index + self.sequence_length]),
+            torch.tensor(
+                self.words_indexes[index + 1 : index + self.sequence_length + 1]
+            ),
         )
