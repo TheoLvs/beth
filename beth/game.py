@@ -88,7 +88,7 @@ class Game:
             move = Move(move,self.board)
             self.board.moves.append(move)
             self.board.push_san(move.move_str)
-            return move.value
+            return move.score
 
     def notebook_play(self):
 

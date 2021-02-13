@@ -22,3 +22,26 @@ PIECE_VALUES_BY_NAME = {
     "QUEEN":9, # Queen
     "KING":100, # King
 }
+
+UNICODE_PIECE_SYMBOLS = {
+    "WHITE":{
+        "PAWN":"♙",
+        "KNIGHT":"♘",
+        "BISHOP":"♗",
+        "ROOK":"♖",
+        "QUEEN":"♕",
+        "KING":"♔",
+    },
+    "BLACK":{
+        "PAWN":"♟",
+        "KNIGHT":"♞",
+        "BISHOP":"♝",
+        "ROOK":"♜",
+        "QUEEN":"♛",
+        "KING":"♚",
+    }
+}
+
+
+def get_unicode_symbol(piece_type,color):
+    return UNICODE_PIECE_SYMBOLS[color][piece_type]
