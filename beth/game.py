@@ -2,6 +2,11 @@ import chess
 from ipywidgets import widgets
 from IPython.display import display
 from .players.human_player import HumanPlayer
+from .move import Move
+
+from chess import scan_forward
+
+from .constants import COLORS,PIECES,PIECE_VALUES_BY_NAME
 
 
 class Game:
@@ -70,16 +75,20 @@ class Game:
 
     def move(self, value=None):
 
-        if self.turn == "WHITE":
-            move = self.white.move(value)
+        if isinstance(value,list):
+            values = [self.move(v) for v in value]
+            return values
         else:
-            move = self.black.move(value)
+            if self.turn == "WHITE":
+                move = self.white.move(value)
+            else:
+                move = self.black.move(value)
 
-        san_move = self.board.parse_san(move)
-        san_move = self.board.san(san_move)
-
-        self.board.moves.append(san_move)
-        self.board.push_san(san_move)
+            # Store in custom representation
+            move = Move(move,self.board)
+            self.board.moves.append(move)
+            self.board.push_san(move.move_str)
+            return move.value
 
     def notebook_play(self):
 
@@ -198,3 +207,66 @@ class Game:
         svg_board = self.make_svg(size=size)
         with open(filepath, "w") as file:
             file.write(svg_board)
+
+
+    def get_pieces_positions_by_type(self,piece_type:str,color:str = None):
+
+        # Prepare binary representation of pieces
+        piece_type = piece_type.upper()
+        if piece_type == "BISHOP":
+            pieces = self.board.bishops
+        elif piece_type == "PAWN":
+            pieces = self.board.pawns
+        elif piece_type == "ROOK":
+            pieces = self.board.rooks
+        elif piece_type == "KNIGHT":
+            pieces = self.board.knights
+        elif piece_type == "QUEEN":
+            pieces = self.board.queens
+        elif piece_type == "KING":
+            pieces = self.board.kings
+        else:
+            raise Exception(f"Piece type {piece_type} is not among {PIECES}")
+
+        # Prepare binary color mask
+        if color is None:
+            mask = self.board.occupied
+        else:
+            if isinstance(color,str):
+                color = 1 if color.upper() == "WHITE" else 0
+            mask = self.board.occupied_co[color]
+
+        return list(scan_forward(pieces & mask))
+
+
+
+    def get_pieces_positions(self):
+
+        pieces = {}
+
+        for i,color in enumerate(COLORS):
+            pieces[color] = {}
+            for piece_type in PIECES:
+                pieces[color][piece_type] = self.get_pieces_positions_by_type(piece_type,i)
+
+        return pieces
+
+
+    def get_scores(self):
+        pos = self.get_pieces_positions()
+        scores = {}
+
+        for i,color in enumerate(COLORS):
+            score = 0
+            for piece_type in PIECES:
+                if piece_type != "KING":
+                    n_pieces = len(pos[color][piece_type])
+                    score += n_pieces * PIECE_VALUES_BY_NAME[piece_type]
+            scores[color] = score
+
+        scores["DIFF"] = scores["WHITE"] - scores["BLACK"] 
+
+        return scores
+
+
+
