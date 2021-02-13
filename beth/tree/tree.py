@@ -23,7 +23,7 @@ class MoveTree:
 
 
     def search_depth(self,breadth = 10,depth = 5):
-        print(f"Searching for {depth} moves ahead with {breadth} choices - {breadth**depth} possibilities")
+        # print(f"Searching for {depth} moves ahead with {breadth} choices - {breadth**depth} possibilities")
         stack = self.explore(breadth,depth)
         stack = pd.DataFrame(stack).sort_values("total",ascending = False)
         stack
