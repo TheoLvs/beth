@@ -6,7 +6,7 @@ from .move import Move
 
 from chess import scan_forward
 
-from .constants import COLORS,PIECES,PIECE_VALUES_BY_NAME
+from .constants import COLORS, PIECES, PIECE_VALUES_BY_NAME
 
 
 class Game:
@@ -75,7 +75,7 @@ class Game:
 
     def move(self, value=None):
 
-        if isinstance(value,list):
+        if isinstance(value, list):
             values = [self.move(v) for v in value]
             return values
         else:
@@ -85,7 +85,7 @@ class Game:
                 move = self.black.move(value)
 
             # Store in custom representation
-            move = Move(move,self.board)
+            move = Move(move, self.board)
             self.board.moves.append(move)
             self.board.push_san(move.move_str)
             return move.score
@@ -183,7 +183,7 @@ class Game:
                         game_loop = False
                         error = True
                         raise e
-            
+
             # if not game_loop and error:
             #     raise Exception
 
@@ -208,8 +208,7 @@ class Game:
         with open(filepath, "w") as file:
             file.write(svg_board)
 
-
-    def get_pieces_positions_by_type(self,piece_type:str,color:str = None):
+    def get_pieces_positions_by_type(self, piece_type: str, color: str = None):
 
         # Prepare binary representation of pieces
         piece_type = piece_type.upper()
@@ -232,31 +231,30 @@ class Game:
         if color is None:
             mask = self.board.occupied
         else:
-            if isinstance(color,str):
+            if isinstance(color, str):
                 color = 1 if color.upper() == "WHITE" else 0
             mask = self.board.occupied_co[color]
 
         return list(scan_forward(pieces & mask))
 
-
-
     def get_pieces_positions(self):
 
         pieces = {}
 
-        for i,color in enumerate(COLORS):
+        for i, color in enumerate(COLORS):
             pieces[color] = {}
             for piece_type in PIECES:
-                pieces[color][piece_type] = self.get_pieces_positions_by_type(piece_type,i)
+                pieces[color][piece_type] = self.get_pieces_positions_by_type(
+                    piece_type, i
+                )
 
         return pieces
-
 
     def get_scores(self):
         pos = self.get_pieces_positions()
         scores = {}
 
-        for i,color in enumerate(COLORS):
+        for i, color in enumerate(COLORS):
             score = 0
             for piece_type in PIECES:
                 if piece_type != "KING":
@@ -264,9 +262,6 @@ class Game:
                     score += n_pieces * PIECE_VALUES_BY_NAME[piece_type]
             scores[color] = score
 
-        scores["DIFF"] = scores["WHITE"] - scores["BLACK"] 
+        scores["DIFF"] = scores["WHITE"] - scores["BLACK"]
 
         return scores
-
-
-
