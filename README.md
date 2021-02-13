@@ -4,7 +4,7 @@ Experimenting with Game AI applied to chess
 
 
 ## Installation
-``beth` is available on PyPi, you can simply it using 
+``beth`` is available on PyPi - https://pypi.org/project/beth/, you can simply it using 
 ```
 pip install beth 
 ``` 
