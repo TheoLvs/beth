@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "beth"
+version = "0.1.0"
+description = "Open source chess AI engine"
+authors = ["Theo Alves Da Costa <theo.alves.da.costa@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7.8"
+numpy = "^1.20.1"
+pandas = "^1.2.2"
+ipywidgets = "^7.6.3"
+jupyter = "^1.0.0"
+ipython = "^7.20.0"
+ipykernel = "^5.4.3"
+python-dotenv = "^0.15.0"
+tqdm = "^4.56.2"
+comet-ml = "^3.3.3"
+chess = "^1.4.0"
+torch = "^1.7.1"
+matplotlib = "^3.3.4"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
