@@ -1,9 +1,13 @@
 [tool.poetry]
 name = "beth"
-version = "0.1.0"
+version = "0.1.1"
 description = "Open source chess AI engine"
 authors = ["Theo Alves Da Costa <theo.alves.da.costa@gmail.com>"]
 license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/theolvs/beth"
+repository = "https://github.com/theolvs/beth"
+documentation = "https://github.com/theolvs/beth"
 
 [tool.poetry.dependencies]
 python = "^3.7.8"

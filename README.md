@@ -2,6 +2,13 @@
 ![](https://images.chesscomfiles.com/uploads/v1/article/22924.4e040c11.668x375o.d12a4478e7d3@2x.jpeg)
 Experimenting with Game AI applied to chess
 
+
+## Installation
+``beth` is available on PyPi, you can simply it using 
+```
+pip install beth 
+``` 
+
 ## Idea
 In this repo will be experiments around AI & chess. In particular Machine Learning applied to the chess game. <br>
 The goal is to create: 
