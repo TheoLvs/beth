@@ -6,7 +6,7 @@ from ..tree.tree import MoveTree
 import random
 
 
-class TreeBrain(AIBrain):
+class TreeSearchBrain(AIBrain):
 
     def __init__(self,breadth = 10,depth = 3):
 
@@ -24,7 +24,7 @@ class TreeBrain(AIBrain):
 
 
 
-class TreeAI(AIPlayer):
+class TreeSearchAI(AIPlayer):
     def __init__(self,breadth = 10,depth = 3,**kwargs):
         brain = TreeBrain(breadth,depth)
         super().__init__(brain,**kwargs)

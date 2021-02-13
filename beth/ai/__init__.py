@@ -1,1 +1,1 @@
-from .tree import TreeAI
+from .tree import TreeSearchAI
