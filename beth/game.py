@@ -1,11 +1,12 @@
 import chess
-from ipywidgets import widgets
+from chess import scan_forward
+from ipywidgets import widgets,interact
 from IPython.display import display
+from copy import deepcopy
+
+# Custom imports
 from .players.human_player import HumanPlayer
 from .move import Move
-
-from chess import scan_forward
-
 from .constants import COLORS, PIECES, PIECE_VALUES_BY_NAME
 
 
@@ -35,6 +36,8 @@ class Game:
 
         # Stack moves
         self.board.moves = []
+        self.board_stack = [deepcopy(self.board)]
+
 
     def reset_game(self, white=None, black=None):
 
@@ -47,6 +50,7 @@ class Game:
 
         # Stack moves
         self.board.moves = []
+        self.board_stack = [deepcopy(self.board)]
 
     @property
     def turn(self):
@@ -75,7 +79,7 @@ class Game:
 
     def move(self, value=None):
 
-        if isinstance(value, list):
+        if isinstance(value, list) or isinstance(value,tuple):
             values = [self.move(v) for v in value]
             return values
         else:
@@ -88,6 +92,10 @@ class Game:
             move = Move(move, self.board)
             self.board.moves.append(move)
             self.board.push_san(move.move_str)
+
+            # Append to board stack for game replay
+            self.board_stack.append(deepcopy(self.board))
+
             return move.score
 
     def notebook_play(self):
@@ -119,6 +127,30 @@ class Game:
                     display(self.board)
 
         button.on_click(on_button_clicked)
+
+    def replay(self,interval=0.5):
+
+        # Prepare widgets
+        play = widgets.Play(
+            value=0,
+            min=0,
+            max=len(self.board_stack) - 1,
+            step=1,
+            interval=interval*1000,
+            description="Press play",
+            disabled=False
+        )
+
+        slider = widgets.IntSlider(min = 0,value = 0,max = len(self.board_stack) - 1,step = 1)
+        widgets.jslink((play, 'value'), (slider, 'value'))
+
+        # Visualize frames and widgets
+        @interact(i = play)
+        def show(i):
+            return self.board_stack[i]
+
+        display(slider)
+
 
     def done(self):
         """Indicator if the game is finished

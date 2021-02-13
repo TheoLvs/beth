@@ -6,7 +6,11 @@ from .constants import get_unicode_symbol
 class Move:
     def __init__(self, value: str, board):
 
-        self.move = board.parse_san(value)
+        if isinstance(value,str):
+            self.move = board.parse_san(value)
+        else:
+            self.move = value
+
         self.move_str = board.san(self.move)
         self.trajectory = (self.move.from_square, self.move.to_square)
         self.is_capture = board.is_capture(self.move)
@@ -15,8 +19,12 @@ class Move:
         self.name = self.from_piece["name"].upper()
 
         if self.is_capture:
-            self.to_piece = parse_piece(board.piece_at(self.to_square))
-            self.value = self.to_piece["value"]
+            try:
+                self.to_piece = parse_piece(board.piece_at(self.to_square))
+                self.value = self.to_piece["value"]
+            except:
+                self.to_piece = {}
+                self.value = 0
         else:
             self.to_piece = {}
             self.value = 0
