@@ -26,5 +26,5 @@ class TreeSearchBrain(AIBrain):
 
 class TreeSearchAI(AIPlayer):
     def __init__(self,breadth = 10,depth = 3,**kwargs):
-        brain = TreeBrain(breadth,depth)
+        brain = TreeSearchBrain(breadth,depth)
         super().__init__(brain,**kwargs)

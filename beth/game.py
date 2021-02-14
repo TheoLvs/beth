@@ -15,6 +15,10 @@ class Game:
 
         self.init_game(white, black)
 
+    def _repr_html_(self):
+        display(self.board)
+        return None
+
     def init_game(self, white=None, black=None):
 
         # Init board

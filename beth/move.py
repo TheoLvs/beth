@@ -6,6 +6,7 @@ from .constants import get_unicode_symbol
 class Move:
     def __init__(self, value: str, board):
 
+
         if isinstance(value,str):
             self.move = board.parse_san(value)
         else:
