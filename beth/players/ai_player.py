@@ -7,7 +7,7 @@ class AIBrain:
     def __init__(self):
         pass
 
-    def predict_next(self,game):
+    def predict_next(self, game):
         pass
 
 
@@ -16,7 +16,7 @@ class AIPlayer(Player):
         super().__init__(wait=wait)
         self.brain = brain
 
-    def move(self, value = None):
+    def move(self, value=None):
 
         # Overriding default behavior by calling the moves
         if value is not None:

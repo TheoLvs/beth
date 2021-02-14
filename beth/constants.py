@@ -11,6 +11,15 @@ PIECE_VALUES = {
     6: 100,  # King
 }
 
+CHECKMATE_VALUE = 100
+
+PROMOTED_PIECES = {
+    "Q":"QUEEN",
+    "R":"ROOK",
+    "N":"KNIGHT",
+    "B":"BISHOP",
+}
+
 
 PIECE_VALUES_BY_NAME = {
     "PAWN": 1,  # Pawns
