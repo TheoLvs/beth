@@ -1,6 +1,7 @@
+import datetime
 import chess
-from chess import scan_forward
-from ipywidgets import widgets,interact
+from chess import scan_forward,pgn
+from ipywidgets import widgets, interact
 from IPython.display import display
 from copy import deepcopy
 
@@ -42,7 +43,6 @@ class Game:
         self.board.moves = []
         self.board_stack = [deepcopy(self.board)]
 
-
     def reset_game(self, white=None, black=None):
 
         # Init board
@@ -83,7 +83,7 @@ class Game:
 
     def move(self, value=None):
 
-        if isinstance(value, list) or isinstance(value,tuple):
+        if isinstance(value, list) or isinstance(value, tuple):
             values = [self.move(v) for v in value]
             return values
         else:
@@ -132,7 +132,7 @@ class Game:
 
         button.on_click(on_button_clicked)
 
-    def replay(self,interval=0.5):
+    def replay(self, interval=0.5):
 
         # Prepare widgets
         play = widgets.Play(
@@ -140,21 +140,22 @@ class Game:
             min=0,
             max=len(self.board_stack) - 1,
             step=1,
-            interval=interval*1000,
+            interval=interval * 1000,
             description="Press play",
-            disabled=False
+            disabled=False,
         )
 
-        slider = widgets.IntSlider(min = 0,value = 0,max = len(self.board_stack) - 1,step = 1)
-        widgets.jslink((play, 'value'), (slider, 'value'))
+        slider = widgets.IntSlider(
+            min=0, value=0, max=len(self.board_stack) - 1, step=1
+        )
+        widgets.jslink((play, "value"), (slider, "value"))
 
         # Visualize frames and widgets
-        @interact(i = play)
+        @interact(i=play)
         def show(i):
             return self.board_stack[i]
 
         display(slider)
-
 
     def done(self):
         """Indicator if the game is finished
@@ -175,6 +176,8 @@ class Game:
         elif self.board.is_fivefold_repetition():
             return True
         elif self.board.is_seventyfive_moves():
+            return True
+        elif self.board.is_insufficient_material():
             return True
         else:
             return False
@@ -243,6 +246,34 @@ class Game:
         svg_board = self.make_svg(size=size)
         with open(filepath, "w") as file:
             file.write(svg_board)
+
+    def make_pgn(self,event = "Beth library development",game_round="1"):
+
+        pgn_game = pgn.Game()
+        pgn_game.headers["Date"] = datetime.datetime.now().isoformat()[:10]
+        pgn_game.headers["Event"] = event
+        pgn_game.headers["Round"] = game_round
+        pgn_game.headers["Site"] = "Virtual"
+        pgn_game.headers["White"] = str(self.white)
+        pgn_game.headers["Black"] = str(self.black)
+        pgn_game.add_line(self.board.move_stack)
+
+        return pgn_game
+
+
+    def save_pgn(self,filepath = None,**kwargs):
+
+        if filepath is None:
+            date = datetime.datetime.now().isoformat()[:19].replace(":","-")
+            filepath = f"PGN_beth_{date}.pgn"
+
+        # Prepare file
+        pgn_game = self.make_pgn(**kwargs)
+
+        # Save file using print output directly in files
+        print(pgn_game,file=open(filepath,"w"),end="\n\n")
+        print(f"Game saved as pgn file at '{filepath}'")
+
 
     def get_pieces_positions_by_type(self, piece_type: str, color: str = None):
 

@@ -1,0 +1,10 @@
+[Event "Beth library development"]
+[Site "Virtual"]
+[Date "2021-02-14"]
+[Round "1"]
+[White "TreeSearchAI(breadth=10,depth=3,gamma=1)"]
+[Black "TreeSearchAI(breadth=10,depth=3,gamma=1)"]
+[Result "*"]
+
+1. Na3 d5 2. Nc4 dxc4 3. Nf3 Bh3 4. g4 Bxg4 5. Rg1 Be6 6. d3 Na6 7. a4 Rb8 8. dxc4 Bxc4 9. c3 Bxe2 10. Bg2 e6 11. Bd2 Bxf3 12. Qb1 Qxd2+ 13. Kxd2 c6 14. Ke1 Ba3 15. Rxa3 Bxg2 16. Rxg2 Nh6 17. Qxh7 Ke7 18. Qxh6 Rxh6 19. Kf1 Kd7 20. c4 Nb4 21. b3 Rg6 22. Ra1 Na2 23. Rg4 Ke8 24. h4 Rxg4 25. Ke1 Nc1 26. f4 Nxb3 27. Kf1 b6 28. Ra2 Rxf4+ 29. Rf2 Na1 30. Rxf4 Kd7 31. c5 bxc5 32. Rf3 Kd8 33. Rb3 c4 34. a5 Nxb3 35. Kg2 Ra8 36. Kf3 Rc8 37. Ke3 Rb8 38. Kf4 Nxa5 39. Ke5 Rc8 40. Kf4 g6 41. h5 Ra8 42. hxg6 Kd7 43. gxf7 Rf8 44. Kg4 Nb3 45. Kg3 Rxf7 46. Kg2 Nc1 47. Kg3 Rf5 48. Kg4 Ra5 49. Kh4 Rb5 50. Kg4 Rb3 51. Kf4 Ra3 52. Ke4 a6 53. Kd4 Rf3 54. Ke5 Nb3 55. Ke4 Rf7 56. Ke5 Rh7 57. Kf6 Rh3 58. Kg6 Kd8 59. Kg5 Kc8 60. Kg4 Rh8 61. Kg5 Re8 62. Kf6 Na5 63. Kf7 Re7+ 64. Kxe7 Kb7 65. Kxe6 Kb6 66. Kf5 Kc7 67. Kf4 Kb7 68. Kg3 Ka8 69. Kg2 Ka7 70. Kh3 Kb6 71. Kh2 c3 72. Kg3 c2 73. Kf4 c1=Q+ 74. Kf5 Kb7 75. Kg6 Ka7 76. Kh7 Qg1 77. Kh6 Qa1 78. Kg6 Qd4 79. Kh6 Nb7 80. Kh5 Qd5+ 81. Kg6 Qf5+ 82. Kh6 Qe5 83. Kg6 Qd4 84. Kh5 Qb4 85. Kg5 Nd6 86. Kg6 Kb6 87. Kh5 a5 88. Kg5 Qb2 89. Kh6 Kc5 90. Kh7 Qb4 91. Kg7 Qb7+ 92. Kh8 Qb4 93. Kg8 Qc4+ 94. Kf8 Qf7# *
+

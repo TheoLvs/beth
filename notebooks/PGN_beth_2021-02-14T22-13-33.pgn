@@ -1,0 +1,10 @@
+[Event "Beth library development"]
+[Site "Virtual"]
+[Date "2021-02-14"]
+[Round "1"]
+[White "TreeSearchAI(breadth=10,depth=2)"]
+[Black "TreeSearchAI(breadth=10,depth=3)"]
+[Result "*"]
+
+1. d3 Na6 2. h4 d6 3. h5 Bg4 4. e4 f6 5. Kd2 Kf7 6. Be2 Qc8 7. Rh3 Bxe2 8. Kxe2 Qg4+ 9. Nf3 Qxh3 10. Ke1 Qg4 11. Nc3 Nb8 12. Nb1 b5 13. Nc3 Qxh5 14. Nd4 g6 15. Kd2 g5 16. Ndxb5 Ke6 17. Ke3 d5 18. Nb1 Qxd1 19. Nxa7 Nc6 20. Nb5 f5 21. a3 dxe4 22. Nxc7+ Kd7 23. Nxa8 h5 24. b3 exd3 25. cxd3 Nf6 26. b4 Kd8 27. f4 Bh6 28. fxg5 Rh7 29. gxh6 h4 30. Bb2 Na5 31. bxa5 e5 32. Bxe5 Rb7 33. Kd4 Rc7 34. Bxc7+ Kd7 35. Ke5 Qxb1 36. Rxb1 Nd5 37. Kxd5 h3 38. gxh3 Kc8 39. Rb3 Kd7 40. Rb2 Kc8 41. Bb6 Kb7 42. Ke5 Ka6 43. Rc2 Kb7 44. Rg2 Kxa8 45. Rg6 Kb7 46. Kxf5 Ka6 47. Rg5 Kb5 48. Bd4 Kxa5 49. Rg6 Kb5 50. Kg5 Ka4 51. Ba7 Kxa3 52. Bb6 Ka4 53. Be3 Ka5 54. d4 Kb4 55. Bf2 Kb5 56. h7 Ka5 57. h8=Q Kb5 58. Rg7 Ka6 59. Be1 Kb6 60. Rg8 Kb5 61. Kg4 Ka4 62. Rc8 Kb5 63. Kf5 Kb6 64. Rb8+ Kc7 65. Qh4 Kd6 66. Qh8 Kc6 67. Rb2 Kd5 68. Kf4 Ke6 69. d5+ Kd7 70. Qc8+ Kxc8 71. d6 Kd7 72. Rb8 Kc6 73. Re8 Kxd6 74. Kg5 Kd7 75. Bh4 Kxe8 76. Kf5 Kd7 77. Bg5 Kc8 78. Ke6 Kc7 79. Bf4+ Kd8 80. Be3 Kc8 81. Bf2 Kb7 82. Be3 Ka8 83. Kf7 Kb8 84. Kf8 Kb7 85. Kf7 Ka6 86. Bh6 Kb6 87. Bg5 Kb7 88. Ke8 Kc6 89. Bc1 Kb6 90. h4 Kb5 91. Be3 Kc4 92. Bd4 Kxd4 93. h5 Kc3 94. Kf7 Kb4 95. Ke6 Kc5 96. Ke7 Kb5 97. Kf8 Kb6 98. Ke8 Ka7 99. Kf7 Kb7 100. h6 Kb8 101. Ke8 Kb7 102. h7 Kb6 103. h8=Q Ka7 104. Qc3 Ka6 105. Qc2 Kb6 106. Qc1 Kb5 107. Kf7 Kb4 108. Qc8 Kb5 109. Qb7+ Ka4 110. Kg6 Ka5 111. Qh7 Kb4 112. Qh4+ Kb5 113. Qh2 Kb6 114. Kf7 Kb7 115. Qh3 Kc7 116. Kf6 Kb8 117. Qf5 Kb7 118. Kg7 Kc6 119. Qe6+ Kb7 120. Qg8 Kc6 121. Qe8+ Kd5 122. Qa4 Kc5 123. Qe4 Kd6 124. Kh7 Kd7 125. Qa4+ Kd8 126. Qa1 Kc7 127. Qf1 Kb6 128. Qe1 Kc5 129. Qe8 Kb6 130. Qe4 Kc5 131. Kh6 Kb5 132. Qe5+ Kb6 133. Qh5 Ka6 134. Qd1 Kb5 135. Qg1 Kb4 136. Qc5+ Kxc5 137. Kh5 Kb4 138. Kh6 Kc4 139. Kg7 Kb3 140. Kg6 Kb2 141. Kf6 Ka2 142. Kf7 Ka1 143. Ke6 Kb1 144. Kd7 Kc2 145. Ke6 Kb2 146. Kd5 Kb1 147. Ke5 Kc2 148. Kd6 Kb2 149. Ke7 Kb3 150. Kd7 Kb2 151. Ke6 Kc3 152. Kd6 Kc4 153. Kd7 Kd4 154. Ke7 Ke4 155. Kf6 Kd5 156. Kg6 Kc6 157. Kg7 Kd6 158. Kg8 Kc6 159. Kf8 *
+
