@@ -1,1 +1,1 @@
-from .random import RandomTreeSearch
+from .tree import TreeSearch
