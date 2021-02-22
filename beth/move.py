@@ -61,6 +61,9 @@ class Move:
             bonus_promotion = PIECE_VALUES_BY_NAME[self.promoted_piece] - 1
             self.value += bonus_promotion
 
+    def __str__(self):
+        return self.move_str
+
 
     def __repr__(self):
         """Elegant representation of the move with unicode symbol and move captures

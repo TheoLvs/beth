@@ -14,9 +14,9 @@ class TreeSearchBrain(AIBrain):
 
     def predict_next(self, game):
 
-        tree = RandomTreeSearch(game.board)
-        moves = tree.search_depth(self.breadth, self.depth,self.gamma)
-        best_moves = moves.loc[moves["total"] == moves["total"].max()]
+        tree = RandomTreeSearch(game.board,self.breadth)
+        moves = tree.search(self.depth)
+        best_moves = moves.loc[moves["is_best_move"] == True]
         self.memory.append(best_moves)
         next_moves = best_moves["next_move"].tolist()
         move = random.choice(next_moves)
