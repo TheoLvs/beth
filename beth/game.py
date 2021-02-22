@@ -247,7 +247,7 @@ class Game:
         with open(filepath, "w") as file:
             file.write(svg_board)
 
-    def make_pgn(self,event = "Beth library development",game_round="1"):
+    def make_pgn(self,description = None,event = "Beth library development",game_round="1"):
 
         pgn_game = pgn.Game()
         pgn_game.headers["Date"] = datetime.datetime.now().isoformat()[:10]
@@ -256,19 +256,21 @@ class Game:
         pgn_game.headers["Site"] = "Virtual"
         pgn_game.headers["White"] = str(self.white)
         pgn_game.headers["Black"] = str(self.black)
+        if description is not None:
+            pgn_game.headers["Description"] = description
         pgn_game.add_line(self.board.move_stack)
 
         return pgn_game
 
 
-    def save_pgn(self,filepath = None,**kwargs):
+    def save_pgn(self,filepath = None,description = None,**kwargs):
 
         if filepath is None:
             date = datetime.datetime.now().isoformat()[:19].replace(":","-")
             filepath = f"PGN_beth_{date}.pgn"
 
         # Prepare file
-        pgn_game = self.make_pgn(**kwargs)
+        pgn_game = self.make_pgn(description = description,**kwargs)
 
         # Save file using print output directly in files
         print(pgn_game,file=open(filepath,"w"),end="\n\n")
