@@ -64,6 +64,12 @@ class Game:
     def other_turn(self):
         return "BLACK" if self.board.turn else "WHITE"
 
+
+    @property
+    def san_moves_stack(self):
+        return [str(x) for x in self.board.moves]
+
+
     def get_turn_description(self):
         return (
             f"Next is {self.turn} - {self.other_turn} has played {self.get_last_move()}"
