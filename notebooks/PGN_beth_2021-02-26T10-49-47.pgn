@@ -1,0 +1,11 @@
+[Event "Beth library development"]
+[Site "Virtual"]
+[Date "2021-02-26"]
+[Round "1"]
+[White "HumanPlayer"]
+[Black "StockfishAI()"]
+[Result "*"]
+[Description "Crushed by Stockfish AI at ELO 1350"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 dxc6 5. d3 f6 6. O-O Ne7 7. Nc3 g5 8. h3 Ng6 9. Be3 h5 10. d4 g4 11. Ne1 gxh3 12. gxh3 Bxh3 13. Nd3 exd4 14. Re1 dxc3 15. bxc3 Qe7 16. c4 Ne5 17. Nxe5 Qg7+ 18. Ng4 Bxg4 19. f3 Bxf3+ 20. Kf2 Qg2# *
+
