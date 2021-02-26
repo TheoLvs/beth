@@ -1,0 +1,11 @@
+[Event "Beth library development"]
+[Site "Virtual"]
+[Date "2021-02-22"]
+[Round "1"]
+[White "HumanPlayer"]
+[Black "TreeSearchAI(depth=4,breadth=None,pruning=True)"]
+[Result "*"]
+[Description "First game where the AI beated me. Stalemate and was struggling to do the endgame. But still. Man vs Machine."]
+
+1. e4 g6 2. d4 Nh6 3. Bxh6 Bxh6 4. Nc3 f5 5. e5 d6 6. Bb5+ Nc6 7. Qd3 dxe5 8. d5 Qd7 9. dxc6 Qxd3 10. cxd3 Kd8 11. Rd1 bxc6 12. Bxc6 Rb8 13. Nd5 Rxb2 14. Rd2 Rxd2 15. Nf3 Rxa2 16. O-O Bd7 17. Bb7 Bc8 18. Bxc8 Kxc8 19. Nxe7+ Kd7 20. Nd5 Kd6 21. Nc3 Ra5 22. h3 Bf8 23. Re1 Bh6 24. g4 fxg4 25. hxg4 Rg8 26. Ne4+ Ke7 27. Rc1 Bxc1 28. d4 exd4 29. Nxd4 Ra6 30. g5 Rb8 31. Nf6 Bxg5 32. Nxh7 Bf6 33. Nf3 Rab6 34. Kg2 Kd8 35. Kg3 Rc8 36. Nf8 Bh8 37. Kg4 Bg7 38. Nxg6 Rxg6+ 39. Kf5 Rg2 40. Ke4 Rxf2 41. Nd4 Bxd4 42. Kxd4 Rf3 43. Kc5 Rg3 44. Kb5 Rf3 45. Ka6 Ra3+ 46. Kb7 c5 *
+

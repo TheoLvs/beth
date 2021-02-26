@@ -1,0 +1,11 @@
+[Event "Beth library development"]
+[Site "Virtual"]
+[Date "2021-02-22"]
+[Round "1"]
+[White "HumanPlayer"]
+[Black "TreeSearchAI(depth=2,breadth=None)"]
+[Result "*"]
+[Description "Force testing if minimax work also with black pieces"]
+
+1. e4 e5 2. Qh5 Bc5 3. Qxf7+ Kxf7 *
+

@@ -1,0 +1,10 @@
+[Event "Beth library development"]
+[Site "Virtual"]
+[Date "2021-02-14"]
+[Round "1"]
+[White "HumanPlayer"]
+[Black "TreeSearchAI(breadth=30,depth=2,gamma=1)"]
+[Result "*"]
+
+1. e4 c5 2. Nf3 b5 3. d4 cxd4 4. Nxd4 a6 5. Nc3 h5 6. Be2 Bb7 7. Bf3 Bxe4 8. Bxe4 Qc7 9. Bxa8 Qxc3+ 10. bxc3 d5 11. Nxb5 axb5 12. Qxd5 f5 13. Bf4 Nf6 14. Qb7 Nd5 15. Qxb8+ Kf7 16. Bxd5+ e6 17. Qc7+ Be7 18. O-O exd5 19. Rfe1 g6 20. Qxe7+ Kg8 21. Bd6 d4 22. Qf8+ Kh7 23. Qf7+ Kh6 24. Bf4+ g5 25. Re6# *
+

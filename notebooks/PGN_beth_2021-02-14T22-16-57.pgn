@@ -1,0 +1,10 @@
+[Event "Beth library development"]
+[Site "Virtual"]
+[Date "2021-02-14"]
+[Round "1"]
+[White "TreeSearchAI(breadth=10,depth=3,gamma=0.9)"]
+[Black "TreeSearchAI(breadth=10,depth=3,gamma=1)"]
+[Result "*"]
+
+1. e4 Nc6 2. Bb5 Nd4 3. g4 f6 4. Bxd7+ Kxd7 5. f4 Ke8 6. c3 e6 7. f5 h6 8. Qa4+ Qd7 9. Qxd4 g6 10. Qxa7 exf5 11. Qxa8 Kd8 12. gxf5 Qh7 13. fxg6 Bb4 14. g7 c5 15. gxh8=Q Qd7 16. Qg7 Qxg7 17. cxb4 cxb4 18. Nf3 Kc7 19. Kf1 Bf5 20. a3 Bxe4 21. axb4 Bxf3 22. Qxb7+ Kxb7 23. Ra7+ Kxa7 24. d3 Qg2+ 25. Ke1 Qe2# *
+
