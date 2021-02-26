@@ -1,0 +1,11 @@
+[Event "Beth library development"]
+[Site "Virtual"]
+[Date "2021-02-26"]
+[Round "1"]
+[White "TreeSearchAI(depth=2,breadth=None)"]
+[Black "StockfishAI()"]
+[Result "*"]
+[Description "AI Crushed by Stockfish AI at ELO 1350"]
+
+1. c3 e5 2. b4 d5 3. Qb3 Nf6 4. Qb2 Bd6 5. g4 Nxg4 6. f4 Qh4+ 7. Kd1 Nf2+ 8. Kc2 Nxh1 9. fxe5 Be7 10. d4 Bf5+ 11. Kd1 Nf2+ 12. Ke1 Nd3+ 13. Kd2 Qe1+ 14. Kc2 Nxc1+ 15. e4 Bxe4+ 16. Bd3 Bxd3# *
+
