@@ -1,5 +1,6 @@
 import datetime
 import chess
+import numpy as np
 from chess import scan_forward,pgn
 from ipywidgets import widgets, interact
 from IPython.display import display
@@ -281,6 +282,38 @@ class Game:
         # Save file using print output directly in files
         print(pgn_game,file=open(filepath,"w"),end="\n\n")
         print(f"Game saved as pgn file at '{filepath}'")
+
+
+    def to_array_3d(self):
+
+        # Get pieces positions as dictionary
+        pos = self.get_pieces_positions()
+
+        # Convert to numpy array
+        arrays = []
+        for color in pos.keys():
+            for piece in pos[color].keys():
+                arr = np.zeros(64)
+                arr[pos[color][piece]] = 1
+                arrays.append(arr.reshape(8,8))
+
+        array = np.stack(arrays,axis = 2)
+        return array
+
+    def to_array(self):
+        # Get pieces positions as dictionary
+        pos = self.get_pieces_positions()
+
+        # Convert to numpy array
+        arrays = []
+        for piece in PIECES:
+            arr = np.zeros((64,2))
+            for i,color in enumerate(COLORS):
+                arr[pos[color][piece],i] = 1
+            arrays.append(arr.reshape(8,8,2))
+
+        array = np.stack(arrays,axis = 3)
+        return array
 
 
     def get_pieces_positions_by_type(self, piece_type: str, color: str = None):
