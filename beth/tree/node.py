@@ -1,12 +1,13 @@
 import numpy as np
 import pandas as pd
+import time
 from copy import deepcopy
 
 from ..move import Move
 
 
 class TreeNode:
-    def __init__(self, board, move=None, stack=None,best_score = 0):
+    def __init__(self, board, move=None, stack=None,best_score = 0,start_time = None,max_time = None):
 
         # Prepare attributes
         # In particular copy the board to reproduce and propagate the node
@@ -16,6 +17,19 @@ class TreeNode:
         self.score = 0
         self.color = "WHITE" if self.board.turn else "BLACK"
         self.pruned = False
+        self.max_time = max_time
+
+        # Early stopping condition
+        if self.max_time is not None:
+            current_time = time.time()
+
+            if start_time is None: 
+                self.start_time = time.time()
+            else:
+                self.start_time = start_time
+
+            if current_time - self.start_time > self.max_time:
+                self.pruned = True
 
         # If a move is provided, push to the copied board
         if move is not None:
@@ -89,7 +103,13 @@ class TreeNode:
         # For each move, recursively explore the following moves
         children = []
         for move in moves:
-            child_tree = TreeNode(self.board, move, stack=self.stack + [move],best_score = self.best_score + move.score)
+            child_tree = TreeNode(
+                self.board, move, 
+                stack=self.stack + [move],
+                best_score = self.best_score + move.score,
+                start_time = self.start_time,
+                max_time = self.max_time
+            )
             children.append(child_tree)
         return children
 

@@ -5,12 +5,12 @@ from .node import TreeNode
 
 
 class TreeSearch:
-    def __init__(self,board,depth = 3,breadth = None,pruning = True):
-        if board is not None:
-            self.node = TreeNode(board)
+    def __init__(self,depth = 3,breadth = None,pruning = True,max_time = None):
+
         self.breadth = breadth
         self.depth = depth
         self.pruning = pruning
+        self.max_time = max_time
         self.memory = []
 
 
@@ -22,11 +22,16 @@ class TreeSearch:
 
         # Select randomly among the legal moves
         else:
-            moves = np.random.choice(moves, size=self.breadth, replace=False)
+            if True:
+                moves = moves[:self.breadth]
+            else:
+                moves = np.random.choice(moves, size=self.breadth, replace=False)
             return moves
 
 
-    def explore(self,depth=5,pruning = True):
+    def explore(self,game,depth=5,pruning = True):
+
+        self.node = TreeNode(game.board,max_time = self.max_time)
 
         # Expand the node using minimax algorithm
         # Select move function can be overriden
@@ -45,11 +50,8 @@ class TreeSearch:
 
     def predict_next(self, game):
 
-        # Initialize the first node from the board
-        self.node = TreeNode(game.board)
-
         # Explore the possible moves
-        moves = self.explore(depth = self.depth,pruning = self.pruning)
+        moves = self.explore(game,depth = self.depth,pruning = self.pruning)
 
         # Selec all the moves that are the best (according to minimax rules)
         # And store to memory

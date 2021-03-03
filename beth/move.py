@@ -93,8 +93,11 @@ class Move:
  
     @property
     def score(self):
+        if not hasattr(self,"_score"):
+            self._score = self.evaluate()
+        return self._score
         # return self.value * self.color_factor
-        return self.evaluate()
+        # return self.evaluate
 
     @property
     def from_square(self):

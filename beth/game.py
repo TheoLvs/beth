@@ -192,6 +192,8 @@ class Game:
 
     def run(self, render=True):
 
+        value = 0
+
         # Init and display ouput
         output = widgets.Output()
         display(output)
@@ -237,14 +239,19 @@ class Game:
             # Stop if the game is done
             if self.done():
                 game_loop = False
+                if self.board.is_checkmate():
+                    value = 1 if self.turn == "BLACK" else -1
 
             # Clear the output to simulate an animation
             if not error:
                 output.clear_output(wait=True)
 
         if not error:
-            with output:
-                display(self.board)
+            if render:
+                with output:
+                    display(self.board)
+
+        return value
 
     def make_svg(self, size=400, **kwargs):
         svg_board = chess.svg.board(board=self.board, size=size, **kwargs)
