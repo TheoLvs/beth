@@ -1,3 +1,6 @@
+
+raise NotImplementedError()
+
 class Rating:
     def __init__(self,mu,sigma):
         self.mu = mu
