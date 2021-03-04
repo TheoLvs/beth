@@ -9,7 +9,8 @@ from copy import deepcopy
 # Custom imports
 from .players.human_player import HumanPlayer
 from .move import Move
-from .constants import COLORS, PIECES, PIECE_VALUES_BY_NAME
+from .constants import COLORS, PIECES, PIECE_VALUES_BY_NAME,PIECE_VALUES_LIST
+from .board import Board
 
 
 class Game:
@@ -24,7 +25,7 @@ class Game:
     def init_game(self, white=None, black=None):
 
         # Init board
-        self.board = chess.Board()
+        self.board = Board()
 
         # Init Human Players if no player type is specified
         if white is None:
@@ -42,12 +43,12 @@ class Game:
 
         # Stack moves
         self.board.moves = []
-        self.board_stack = [deepcopy(self.board)]
+        self.board_stack = [self.board.deepcopy()]
 
     def reset_game(self, white=None, black=None):
 
         # Init board
-        self.board = chess.Board()
+        self.board = Board()
 
         # Bind each player with the board as well to retrieve the moves
         self.white.bind(self, "WHITE")
@@ -105,7 +106,7 @@ class Game:
             self.board.push_san(move.move_str)
 
             # Append to board stack for game replay
-            self.board_stack.append(deepcopy(self.board))
+            self.board_stack.append(self.board.deepcopy())
 
             return move.score
 
@@ -191,6 +192,8 @@ class Game:
 
     def run(self, render=True):
 
+        value = 0
+
         # Init and display ouput
         output = widgets.Output()
         display(output)
@@ -236,14 +239,19 @@ class Game:
             # Stop if the game is done
             if self.done():
                 game_loop = False
+                if self.board.is_checkmate():
+                    value = 1 if self.turn == "BLACK" else -1
 
             # Clear the output to simulate an animation
             if not error:
                 output.clear_output(wait=True)
 
         if not error:
-            with output:
-                display(self.board)
+            if render:
+                with output:
+                    display(self.board)
+
+        return value
 
     def make_svg(self, size=400, **kwargs):
         svg_board = chess.svg.board(board=self.board, size=size, **kwargs)
@@ -283,93 +291,3 @@ class Game:
         print(pgn_game,file=open(filepath,"w"),end="\n\n")
         print(f"Game saved as pgn file at '{filepath}'")
 
-
-    def to_array_3d(self):
-
-        # Get pieces positions as dictionary
-        pos = self.get_pieces_positions()
-
-        # Convert to numpy array
-        arrays = []
-        for color in pos.keys():
-            for piece in pos[color].keys():
-                arr = np.zeros(64)
-                arr[pos[color][piece]] = 1
-                arrays.append(arr.reshape(8,8))
-
-        array = np.stack(arrays,axis = 2)
-        return array
-
-    def to_array(self):
-        # Get pieces positions as dictionary
-        pos = self.get_pieces_positions()
-
-        # Convert to numpy array
-        arrays = []
-        for piece in PIECES:
-            arr = np.zeros((64,2))
-            for i,color in enumerate(COLORS):
-                arr[pos[color][piece],i] = 1
-            arrays.append(arr.reshape(8,8,2))
-
-        array = np.stack(arrays,axis = 3)
-        return array
-
-
-    def get_pieces_positions_by_type(self, piece_type: str, color: str = None):
-
-        # Prepare binary representation of pieces
-        piece_type = piece_type.upper()
-        if piece_type == "BISHOP":
-            pieces = self.board.bishops
-        elif piece_type == "PAWN":
-            pieces = self.board.pawns
-        elif piece_type == "ROOK":
-            pieces = self.board.rooks
-        elif piece_type == "KNIGHT":
-            pieces = self.board.knights
-        elif piece_type == "QUEEN":
-            pieces = self.board.queens
-        elif piece_type == "KING":
-            pieces = self.board.kings
-        else:
-            raise Exception(f"Piece type {piece_type} is not among {PIECES}")
-
-        # Prepare binary color mask
-        if color is None:
-            mask = self.board.occupied
-        else:
-            if isinstance(color, str):
-                color = 1 if color.upper() == "WHITE" else 0
-            mask = self.board.occupied_co[color]
-
-        return list(scan_forward(pieces & mask))
-
-    def get_pieces_positions(self):
-
-        pieces = {}
-
-        for i, color in enumerate(COLORS):
-            pieces[color] = {}
-            for piece_type in PIECES:
-                pieces[color][piece_type] = self.get_pieces_positions_by_type(
-                    piece_type, i
-                )
-
-        return pieces
-
-    def get_scores(self):
-        pos = self.get_pieces_positions()
-        scores = {}
-
-        for i, color in enumerate(COLORS):
-            score = 0
-            for piece_type in PIECES:
-                if piece_type != "KING":
-                    n_pieces = len(pos[color][piece_type])
-                    score += n_pieces * PIECE_VALUES_BY_NAME[piece_type]
-            scores[color] = score
-
-        scores["DIFF"] = scores["WHITE"] - scores["BLACK"]
-
-        return scores

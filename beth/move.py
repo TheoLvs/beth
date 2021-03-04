@@ -24,6 +24,11 @@ class Move:
         # Convert to real SAN value to have a uniformed string version
         self.move_str = board.san(self.move)
 
+        # Store board and future board
+        self.board_from = board.deepcopy()
+        self.board_to = board.deepcopy()
+        self.board_to.push_san(self.move_str)
+
         # Evaluate move characteristics, capture, from and to square
         self.trajectory = (self.move.from_square, self.move.to_square)
         self.is_capture = board.is_capture(self.move)
@@ -78,9 +83,21 @@ class Move:
             f"{unicode_symbol} {self.color} {self.name} {x} -> {y} {value_str}".strip()
         )
 
+    def evaluate(self,with_heuristics = True,heuristics_matrix=None):
+        if self.checkmate:
+            return CHECKMATE_VALUE * self.color_factor
+        else:
+            score_from = self.board_from.evaluate(with_heuristics,heuristics_matrix)
+            score_to = self.board_to.evaluate(with_heuristics,heuristics_matrix)
+            return score_to[0] - score_from[0]
+ 
     @property
     def score(self):
-        return self.value * self.color_factor
+        if not hasattr(self,"_score"):
+            self._score = self.evaluate()
+        return self._score
+        # return self.value * self.color_factor
+        # return self.evaluate
 
     @property
     def from_square(self):

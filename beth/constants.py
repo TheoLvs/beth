@@ -8,10 +8,10 @@ PIECE_VALUES = {
     3: 3,  # Bishops
     4: 5,  # Rook
     5: 9,  # Queen
-    6: 100,  # King
+    6: 200,  # King
 }
 
-CHECKMATE_VALUE = 100
+CHECKMATE_VALUE = 200
 
 PROMOTED_PIECES = {
     "Q":"QUEEN",
@@ -27,8 +27,11 @@ PIECE_VALUES_BY_NAME = {
     "BISHOP": 3,  # Bishops
     "ROOK": 5,  # Rook
     "QUEEN": 9,  # Queen
-    "KING": 100,  # King
+    "KING": 200,  # King
 }
+
+PIECE_VALUES_LIST = [1,3,3,5,9,0]
+
 
 UNICODE_PIECE_SYMBOLS = {
     "WHITE": {

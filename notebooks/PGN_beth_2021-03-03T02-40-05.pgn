@@ -1,0 +1,11 @@
+[Event "Beth library development"]
+[Site "Virtual"]
+[Date "2021-03-03"]
+[Round "1"]
+[White "TreeSearchAI(depth=5,breadth=10)"]
+[Black "StockfishAI()"]
+[Result "*"]
+[Description "First victory of the TreeSearch AI against Stockfish level 1, worked by using a max time filter and move ordering and selection + heuristics"]
+
+1. Nc3 d5 2. Nf3 d4 3. e4 c6 4. Bc4 Nf6 5. O-O dxc3 6. dxc3 Qxd1 7. Rxd1 Nxe4 8. Ne5 f6 9. Bf7# *
+

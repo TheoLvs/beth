@@ -1,0 +1,11 @@
+[Event "Beth library development"]
+[Site "Virtual"]
+[Date "2021-03-03"]
+[Round "1"]
+[White "HumanPlayer"]
+[Black "TreeSearchAI(depth=5,breadth=10)"]
+[Result "*"]
+[Description "Human victory against custom AI (approximate Stockfish Elo of 1)"]
+
+1. e4 Nf6 2. d3 Nc6 3. Nf3 e5 4. Nbd2 d5 5. g3 dxe4 6. Nxe4 Bd6 7. Bg5 Be6 8. Bg2 Nd4 9. Nxd4 exd4 10. O-O O-O 11. Qf3 Nxe4 12. Bxd8 Be5 13. Bxc7 Bxc7 14. Qxe4 Bb6 15. Rae1 Rfc8 16. Qh4 Rxc2 17. Bxb7 Re8 18. Be4 Rxb2 19. Qxh7+ Kf8 20. Qh8+ Ke7 21. Qxg7 Rd8 22. Bf5 Kd7 23. Bxe6+ Kc7 24. Qxf7+ Kb8 25. Bf5 Bc5 26. Be4 a6 27. Rb1 Rd6 28. Rxb2+ Kc8 29. Qb7+ Kd8 30. Qb8+ Ke7 31. Rb7+ Rd7 32. Rxd7+ Kxd7 33. Rc1 Ke7 34. Rxc5 Kf7 35. Qb6 Kg7 36. Rc7+ Kg8 37. Qb8# *
+

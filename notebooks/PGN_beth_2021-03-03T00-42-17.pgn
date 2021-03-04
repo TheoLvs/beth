@@ -1,0 +1,11 @@
+[Event "Beth library development"]
+[Site "Virtual"]
+[Date "2021-03-03"]
+[Round "1"]
+[White "StockfishAI()"]
+[Black "TreeSearchAI(depth=3,breadth=None)"]
+[Result "*"]
+[Description "Stockfish level 1 vs TreeSearch with pruning and board heuristics - 1st attempt"]
+
+1. d4 Nc6 2. d5 Nf6 3. dxc6 dxc6 4. Qxd8+ Kxd8 5. f3 e5 6. Nd2 Be6 7. g3 Bb4 8. c3 Bd6 9. a4 Kc8 10. a5 Kb8 11. b4 c5 12. b5 c4 13. Bh3 Bxh3 14. Nxh3 Re8 15. Rf1 e4 16. Nxc4 exf3 17. Rf2 Rxe2+ 18. Rxe2 fxe2 19. Kxe2 Ne4 20. Nxd6 cxd6 21. Kd3 Nc5+ 22. Kc4 d5+ 23. Kxc5 b6+ 24. Kd6 bxa5 25. Kxd5 a4 26. Bf4+ Kb7 27. Bd6 Rd8 28. Nf4 a3 29. h4 Rxd6+ 30. Kxd6 a2 31. Rxa2 Kb8 32. Nd3 h6 33. Ne5 Ka8 34. Nc6 a6 35. Kc7 a5 36. Nxa5 Ka7 37. Nb7# *
+
