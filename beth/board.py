@@ -11,9 +11,27 @@ from .heuristics import HEURISTICS_MATRIX
 class Board(chess.Board):
 
     def deepcopy(self):
+        """Duplicate the board with the current pieces positions
+        Will be used for board evaluation and traversing tree search engines 
+
+        Returns:
+            Board: the same duplicated board as the current object
+        """
         return deepcopy(self)
 
-    def get_pieces_positions_by_type(self, piece_type: str, color: str = None):
+    def get_pieces_positions_by_type(self, piece_type: str, color: str = None) -> list:
+        """Parse the bitboard representation to get pieces positions on the board
+
+        Args:
+            piece_type (str): the name of the piece in uppercase
+            color (str, optional): WHITE or BLACK. Defaults to None.
+
+        Raises:
+            Exception: if the name of the piece is not recognized (practical to debug)
+
+        Returns:
+            list: The position (between 0 and 63) of the piece type selected
+        """
 
         # Prepare binary representation of pieces
         piece_type = piece_type.upper()
