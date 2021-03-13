@@ -7,6 +7,8 @@ theme:
   # logo: assets/logo.png
   # favicon: assets/favicon.png
   name: 'material'
+  font:
+    text: Inter
   icon:
     repo: fontawesome/brands/github
   features:

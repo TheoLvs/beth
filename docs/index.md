@@ -1,5 +1,7 @@
 # ♟ Welcome to ``beth`` documentation
 
+![](assets/beth_home.png)
+
 ``beth`` is an open source chess AI framework. Like many, I re-discovered the game of chess by watching the Netflix show **the Queen's Gambit**. As a Data Scientist, it made we want to learn and explore the beauty of the game. 
 
 At first my goal was to develop algorithms to help me learn chess. But over time, it lead to developing more and more features. What you will find is my personal experiments open sourced as a chess framework. I hope this framework to be ideal for chess programmers in Python to ease the development of new algorithms and engines.

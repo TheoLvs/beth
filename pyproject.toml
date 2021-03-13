@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "beth"
-version = "0.1.1"
-description = "Open source chess AI engine"
+version = "0.2.0"
+description = "Open source chess AI framework"
 authors = ["Theo Alves Da Costa <theo.alves.da.costa@gmail.com>"]
 license = "MIT"
 readme = "README.md"

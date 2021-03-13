@@ -1,74 +1,52 @@
-# beth
-![](https://images.chesscomfiles.com/uploads/v1/article/22924.4e040c11.668x375o.d12a4478e7d3@2x.jpeg)
-Experimenting with Game AI applied to chess
+# ♟ Welcome to ``beth`` documentation
 
+![](assets/beth_home.png)
+
+``beth`` is an open source chess AI framework. Like many, I re-discovered the game of chess by watching the Netflix show **the Queen's Gambit**. As a Data Scientist, it made we want to learn and explore the beauty of the game. 
+
+At first my goal was to develop algorithms to help me learn chess. But over time, it lead to developing more and more features. What you will find is my personal experiments open sourced as a chess framework. I hope this framework to be ideal for chess programmers in Python to ease the development of new algorithms and engines.
+
+
+> This repo is under active development, many features are still experimental.
+> But please fill free to fork or PR
 
 ## Installation
-``beth`` is available on PyPi - https://pypi.org/project/beth/, you can simply it using 
+You can install the library from PyPi with: 
 ```
-pip install beth 
-``` 
-
-## Idea
-In this repo will be experiments around AI & chess. In particular Machine Learning applied to the chess game. <br>
-The goal is to create: 
-
-- Algorithms to play chess using Machine Learning, Reinforcement Learning & NLP
-- Auto-guide to help human learn and improve at playing chess
-- Adaptive AI to match the player ELO and make him improve
-
-> This repo is **under active development**
-
+pip install beth
+```
+Or clone and install from source
 
 ## Features
-### Environment
+- Definition of a game environment using ``python-chess`` framework, with move parsing, board-to-numpy abstractions, PGN records, move replay. 
+- Playing chess in Jupyter notebooks with widgets 
+- Different player abstractions: ``HumanPlayer()``, ``RandomPlayer()``, ``AIPlayer()`` - to play Human vs AI, Human vs Human, or AI vs AI. 
+- Connection to Stockfis engine to evaluate engine performances, available with ``StockfishAI()`` object abstraction
+- Rules-based engine ``TreeSearchAI()`` with minimax tree search, alpha beta pruning, move ordering and board heuristics (~ELO 1000)
+- First attempt of ML engine with a LSTM Neural Network to predict next moves
 
-- [x] Experimenting with the [python chess](https://python-chess.readthedocs.io/en) library
-- [x] Implementing ``Game`` framework
-- [x] ``HumanPlayer`` to play chess in Jupyter notebook
-- [x] ``RandomPlayer`` the most simple bot to easily test out new ideas and debug
-- [ ] Read PGN files and load into ML algorithms
-- [ ] Measure ELO of an algorithm/AI, or any consistant metric of performance
-- [ ] Saving game as gif or video
+### Next roadmap features
+If you are interested, please drop an issue or a PR, or contact me by [email](mailto:theo.alves.da.costa@gmail.com). Meanwhile the roadmap for ``beth`` is:
 
-### Model utils
-- [x] Monitor algorithm performance using Comet.ml / tensorboard
-- [x] Saving algorithm weights to be reused
-- [x] Visualize probabilities to see best moves and if training worked
-- [ ] Transform game object into 3D tensor (2D dimension + one hot encoding of pieces positions)
-- [ ] Install, test, and integrate CodeCarbon
-- [ ] Train on Google Colab
-
-### Algorithms & approaches
-- [ ] AlphaGo approach: value function and policy function evaluation using Reinforcement Learning & MCTS
-- [ ] AlphaZero approach: self play competition
-- [ ] NLP approach: predicting next move using NLP techniques (LSTM, Transformers)
-  - [ ] LSTM / RNN / GRU
-  - [ ] Transformers
-  - [ ] Directly using Hugging Face ``transformers`` [library](https://huggingface.co/transformers/task_summary.html) 
-- [ ] Hybrid techniques with both NLP-like + modeling the game as 3D tensor 
-- [ ] GameAI techniques (minimax, rules-based)
-  - [ ] Super simple approach where at each step Random Play from a PGN file or list of moves. 
-- [ ] Test connection to Game engines like stockfish
-
-## References
-- https://python-chess.readthedocs.io/en
-- https://lichess.org/
-- https://www.chess.com/games/
-
-### Sequential Deep Learning
-- https://pytorch.org/tutorials/beginner/transformer_tutorial.html
-
-### Game Databases
-- https://www.chess.com/games/
-- https://www.kaggle.com/datasnaek/chess
-
-### State of the art approaches
-- https://ai.facebook.com/blog/rebel-a-general-game-playing-ai-bot-that-excels-at-poker-and-more/
-  
-
-### Libraries
-- Deep Learning ``jax, trax, rlax, haiku and pytorch-lightning``
-- Monitoring (comet.ml, [livelossplot](https://github.com/stared/livelossplot), [tensorboard](https://pytorch.org/tutorials/recipes/recipes/tensorboard_with_pytorch.html))
+- Implementing a GUI (or connecting to an existing one) to ease experimentation
+- ELO or TrueSkill measurement for any engine
+- Improving minimax engine speed
+- Developing ML engines:
+  - Self supervised learning with Transformers
+  - Reinforcement Learning
 
 
+## Repo Structure
+```
+- beth/
+- data/
+    - raw/
+    - processed/
+- docs/                             # Documentation folder and website (.md, .ipynb) using Mkdocs
+- notebooks/                        # Jupyter notebooks only (.ipynb)
+- tests/                            # Unitary testing using pytest
+- .gitignore
+- LICENSE                           # MIT License
+- poetry.lock                       # Poetry lock file
+- pyproject.toml                    # Configuration file to export and package the library using Poetry
+```
