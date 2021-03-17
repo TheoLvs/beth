@@ -10,8 +10,8 @@ repository = "https://github.com/theolvs/beth"
 documentation = "https://github.com/theolvs/beth"
 
 [tool.poetry.dependencies]
-python = "^3.7.8"
-numpy = "^1.20.1"
+python = ">=3.7.8"
+numpy = ">=1.19.2"
 pandas = "^1.2.2"
 ipywidgets = "^7.6.3"
 jupyter = "^1.0.0"
@@ -29,6 +29,7 @@ snakeviz = "^2.1.0"
 xlrd = "^2.0.1"
 openpyxl = "^3.0.6"
 seaborn = "^0.11.1"
+tensorflow = "^2.4.1"
 
 [tool.poetry.dev-dependencies]
 
