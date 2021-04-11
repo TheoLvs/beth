@@ -1,7 +1,7 @@
 import datetime
 import chess
 import numpy as np
-from chess import scan_forward,pgn
+from chess import scan_forward, pgn
 from ipywidgets import widgets, interact
 from IPython.display import display
 from copy import deepcopy
@@ -9,7 +9,7 @@ from copy import deepcopy
 # Custom imports
 from .players.human_player import HumanPlayer
 from .move import Move
-from .constants import COLORS, PIECES, PIECE_VALUES_BY_NAME,PIECE_VALUES_LIST
+from .constants import COLORS, PIECES, PIECE_VALUES_BY_NAME, PIECE_VALUES_LIST
 from .board import Board
 
 
@@ -66,16 +66,12 @@ class Game:
     def other_turn(self):
         return "BLACK" if self.board.turn else "WHITE"
 
-
     @property
     def san_moves_stack(self):
         return [str(x) for x in self.board.moves]
 
-
     def get_turn_description(self):
-        return (
-            f"Next is {self.turn} - {self.other_turn} has played {self.get_last_move()}"
-        )
+        return f"Next is {self.turn} - {self.other_turn} has played {self.get_last_move()}"
 
     def get_last_move(self):
         return str(self.get_moves()[-1])
@@ -153,9 +149,7 @@ class Game:
             disabled=False,
         )
 
-        slider = widgets.IntSlider(
-            min=0, value=0, max=len(self.board_stack) - 1, step=1
-        )
+        slider = widgets.IntSlider(min=0, value=0, max=len(self.board_stack) - 1, step=1)
         widgets.jslink((play, "value"), (slider, "value"))
 
         # Visualize frames and widgets
@@ -262,7 +256,7 @@ class Game:
         with open(filepath, "w") as file:
             file.write(svg_board)
 
-    def make_pgn(self,description = None,event = "Beth library development",game_round="1"):
+    def make_pgn(self, description=None, event="Beth library development", game_round="1"):
 
         pgn_game = pgn.Game()
         pgn_game.headers["Date"] = datetime.datetime.now().isoformat()[:10]
@@ -277,17 +271,15 @@ class Game:
 
         return pgn_game
 
-
-    def save_pgn(self,filepath = None,description = None,**kwargs):
+    def save_pgn(self, filepath=None, description=None, **kwargs):
 
         if filepath is None:
-            date = datetime.datetime.now().isoformat()[:19].replace(":","-")
+            date = datetime.datetime.now().isoformat()[:19].replace(":", "-")
             filepath = f"PGN_beth_{date}.pgn"
 
         # Prepare file
-        pgn_game = self.make_pgn(description = description,**kwargs)
+        pgn_game = self.make_pgn(description=description, **kwargs)
 
         # Save file using print output directly in files
-        print(pgn_game,file=open(filepath,"w"),end="\n\n")
+        print(pgn_game, file=open(filepath, "w"), end="\n\n")
         print(f"Game saved as pgn file at '{filepath}'")
-

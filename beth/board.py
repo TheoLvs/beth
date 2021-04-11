@@ -1,18 +1,16 @@
 import numpy as np
 import chess
-from chess import scan_forward,pgn
+from chess import scan_forward, pgn
 from copy import deepcopy
 
-from .constants import PIECES,COLORS,PIECE_VALUES_BY_NAME,PIECE_VALUES_LIST
+from .constants import PIECES, COLORS, PIECE_VALUES_BY_NAME, PIECE_VALUES_LIST
 from .heuristics import HEURISTICS_MATRIX
 
 
-
 class Board(chess.Board):
-
     def deepcopy(self):
         """Duplicate the board with the current pieces positions
-        Will be used for board evaluation and traversing tree search engines 
+        Will be used for board evaluation and traversing tree search engines
 
         Returns:
             Board: the same duplicated board as the current object
@@ -56,7 +54,7 @@ class Board(chess.Board):
         else:
             if isinstance(color, str):
                 color = 0 if color.upper() == "WHITE" else 1
-            mask = self.occupied_co[1-color]
+            mask = self.occupied_co[1 - color]
 
         return list(scan_forward(pieces & mask))
 
@@ -67,14 +65,9 @@ class Board(chess.Board):
         for i, color in enumerate(COLORS):
             pieces[color] = {}
             for piece_type in PIECES:
-                pieces[color][piece_type] = self.get_pieces_positions_by_type(
-                    piece_type, i
-                )
+                pieces[color][piece_type] = self.get_pieces_positions_by_type(piece_type, i)
 
         return pieces
-
-
-
 
     def get_scores(self):
         raise DeprecationWarning()
@@ -92,9 +85,7 @@ class Board(chess.Board):
         scores["DIFF"] = scores["WHITE"] - scores["BLACK"]
         return scores
 
-
-
-    def evaluate(self,with_heuristics = True,heuristics_matrix = None):
+    def evaluate(self, with_heuristics=True, heuristics_matrix=None):
 
         # Transform board to numpy 4D tensor
         board_array = self.to_array()
@@ -104,8 +95,8 @@ class Board(chess.Board):
         # values = np.stack([values,values]) * np.array([[1],[-1]]) (if broadcasting directly the minus sign)
 
         # Prepare white and black board tensors
-        white_board = board_array[:,:,0,:]
-        black_board = board_array[:,:,1,:]
+        white_board = board_array[:, :, 0, :]
+        black_board = board_array[:, :, 1, :]
 
         # Compute board scores
         white_score = (white_board * piece_values).sum()
@@ -116,14 +107,13 @@ class Board(chess.Board):
             if heuristics_matrix is None:
                 heuristics_matrix = HEURISTICS_MATRIX
 
-            white_heuristics = (white_board * heuristics_matrix[:,:,0,:]).sum()
-            black_heuristics = (black_board * heuristics_matrix[:,:,1,:]).sum()
+            white_heuristics = (white_board * heuristics_matrix[:, :, 0, :]).sum()
+            black_heuristics = (black_board * heuristics_matrix[:, :, 1, :]).sum()
 
             white_score += white_heuristics
             black_score += black_heuristics
 
-        return (white_score - black_score,white_score,black_score)
-
+        return (white_score - black_score, white_score, black_score)
 
     def to_array(self):
         # Get pieces positions as dictionary
@@ -132,11 +122,10 @@ class Board(chess.Board):
         # Convert to numpy array
         arrays = []
         for piece in PIECES:
-            arr = np.zeros((64,2))
-            for i,color in enumerate(COLORS):
-                arr[pos[color][piece],i] = 1
-            arrays.append(arr.reshape(8,8,2))
+            arr = np.zeros((64, 2))
+            for i, color in enumerate(COLORS):
+                arr[pos[color][piece], i] = 1
+            arrays.append(arr.reshape(8, 8, 2))
 
-        array = np.flipud(np.stack(arrays,axis = 3))
+        array = np.flipud(np.stack(arrays, axis=3))
         return array
-

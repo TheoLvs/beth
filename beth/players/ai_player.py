@@ -7,7 +7,7 @@ class AIPlayer(Player):
     def __init__(self, brain, wait=None):
         super().__init__(wait=wait)
         self.brain = brain
-        assert hasattr(self.brain,"predict_next")
+        assert hasattr(self.brain, "predict_next")
 
     def move(self, value=None):
 

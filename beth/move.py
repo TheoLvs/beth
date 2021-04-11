@@ -1,7 +1,7 @@
 from chess import parse_square, square_name, Board
 from .piece import parse_piece
 from .constants import get_unicode_symbol, CHECKMATE_VALUE
-from .constants import PIECE_VALUES_BY_NAME,PROMOTED_PIECES
+from .constants import PIECE_VALUES_BY_NAME, PROMOTED_PIECES
 
 
 class Move:
@@ -59,16 +59,15 @@ class Move:
             self.value = CHECKMATE_VALUE
 
         # Promotion rules
-        # Parsing the SAN name to get promotion piece (With a check the san value is appended by +) 
+        # Parsing the SAN name to get promotion piece (With a check the san value is appended by +)
         # Move value increased by the promotion piece minus the pawn value we exchanged
         if "=" in self.move_str:
-            self.promoted_piece = PROMOTED_PIECES[self.move_str.split("=")[-1].replace("+","").replace("#","")]
+            self.promoted_piece = PROMOTED_PIECES[self.move_str.split("=")[-1].replace("+", "").replace("#", "")]
             bonus_promotion = PIECE_VALUES_BY_NAME[self.promoted_piece] - 1
             self.value += bonus_promotion
 
     def __str__(self):
         return self.move_str
-
 
     def __repr__(self):
         """Elegant representation of the move with unicode symbol and move captures
@@ -79,21 +78,19 @@ class Move:
         x, y = self.trajectory_str
         unicode_symbol = get_unicode_symbol(self.name, self.color)
         value_str = f"(+{self.value})" if self.value > 0 else ""
-        return (
-            f"{unicode_symbol} {self.color} {self.name} {x} -> {y} {value_str}".strip()
-        )
+        return f"{unicode_symbol} {self.color} {self.name} {x} -> {y} {value_str}".strip()
 
-    def evaluate(self,with_heuristics = True,heuristics_matrix=None):
+    def evaluate(self, with_heuristics=True, heuristics_matrix=None):
         if self.checkmate:
             return CHECKMATE_VALUE * self.color_factor
         else:
-            score_from = self.board_from.evaluate(with_heuristics,heuristics_matrix)
-            score_to = self.board_to.evaluate(with_heuristics,heuristics_matrix)
+            score_from = self.board_from.evaluate(with_heuristics, heuristics_matrix)
+            score_to = self.board_to.evaluate(with_heuristics, heuristics_matrix)
             return score_to[0] - score_from[0]
- 
+
     @property
     def score(self):
-        if not hasattr(self,"_score"):
+        if not hasattr(self, "_score"):
             self._score = self.evaluate()
         return self._score
         # return self.value * self.color_factor

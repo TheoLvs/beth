@@ -6,9 +6,9 @@ import chess.engine
 # https://github.com/official-stockfish/Stockfish
 # https://stockfishchess.org/
 
-class StockfishAI(AIPlayer):
 
-    def __init__(self,path,level = 0,elo=None,depth = None,wait = 0,limit = 0.1):
+class StockfishAI(AIPlayer):
+    def __init__(self, path, level=0, elo=None, depth=None, wait=0, limit=0.1):
 
         self.path = path
         self.engine = chess.engine.SimpleEngine.popen_uci(path)
@@ -16,16 +16,16 @@ class StockfishAI(AIPlayer):
         self.limit = 0.1
         self.level = level
 
-        self.engine.configure({"Skill Level":level})
+        self.engine.configure({"Skill Level": level})
 
         if elo is not None:
-            self.engine.configure({"UCI_LimitStrength":True})
-            self.engine.configure({"UCI_Elo":elo})
+            self.engine.configure({"UCI_LimitStrength": True})
+            self.engine.configure({"UCI_Elo": elo})
 
     def __str__(self):
         return f"StockfishAI()"
-    
-    def predict_next(self,board,limit = None):
+
+    def predict_next(self, board, limit=None):
         if limit is None:
             limit = self.limit
         result = self.engine.play(board, chess.engine.Limit(time=limit))

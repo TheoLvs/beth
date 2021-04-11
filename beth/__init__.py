@@ -1,2 +1,2 @@
 from .game import Game
-from .players import HumanPlayer,RandomPlayer,AIPlayer
+from .players import HumanPlayer, RandomPlayer, AIPlayer

@@ -1,4 +1,4 @@
-COLORS = ["WHITE","BLACK"]
+COLORS = ["WHITE", "BLACK"]
 PIECES = ["PAWN", "KNIGHT", "BISHOP", "ROOK", "QUEEN", "KING"]
 
 
@@ -14,10 +14,10 @@ PIECE_VALUES = {
 CHECKMATE_VALUE = 200
 
 PROMOTED_PIECES = {
-    "Q":"QUEEN",
-    "R":"ROOK",
-    "N":"KNIGHT",
-    "B":"BISHOP",
+    "Q": "QUEEN",
+    "R": "ROOK",
+    "N": "KNIGHT",
+    "B": "BISHOP",
 }
 
 
@@ -30,7 +30,7 @@ PIECE_VALUES_BY_NAME = {
     "KING": 200,  # King
 }
 
-PIECE_VALUES_LIST = [1,3,3,5,9,0]
+PIECE_VALUES_LIST = [1, 3, 3, 5, 9, 0]
 
 
 UNICODE_PIECE_SYMBOLS = {

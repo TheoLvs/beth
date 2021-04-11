@@ -4,7 +4,6 @@ from .player import Player
 
 
 class RandomPlayer(Player):
-
     def __str__(self):
         return "RandomPlayer"
 

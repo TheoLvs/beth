@@ -33,7 +33,5 @@ class Dataset(torch.utils.data.Dataset):
     def __getitem__(self, index):
         return (
             torch.tensor(self.words_indexes[index : index + self.sequence_length]),
-            torch.tensor(
-                self.words_indexes[index + 1 : index + self.sequence_length + 1]
-            ),
+            torch.tensor(self.words_indexes[index + 1 : index + self.sequence_length + 1]),
         )

@@ -2,7 +2,6 @@ from .player import Player
 
 
 class HumanPlayer(Player):
-
     def __str__(self):
         return "HumanPlayer"
 

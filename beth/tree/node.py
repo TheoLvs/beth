@@ -7,7 +7,7 @@ from ..move import Move
 
 
 class TreeNode:
-    def __init__(self, board, move=None, stack=None,best_score = 0,start_time = None,max_time = None):
+    def __init__(self, board, move=None, stack=None, best_score=0, start_time=None, max_time=None):
 
         # Prepare attributes
         # In particular copy the board to reproduce and propagate the node
@@ -23,7 +23,7 @@ class TreeNode:
         if self.max_time is not None:
             current_time = time.time()
 
-            if start_time is None: 
+            if start_time is None:
                 self.start_time = time.time()
             else:
                 self.start_time = start_time
@@ -52,7 +52,7 @@ class TreeNode:
         self.legal_moves = list(self.board.legal_moves)
 
     def has_children(self):
-        return len(self.legal_moves) > 0 
+        return len(self.legal_moves) > 0
 
     def is_white_turn(self):
         # Help to determine who is the maximizing player
@@ -72,10 +72,7 @@ class TreeNode:
         return f"{self.color.title()}Node({moves_stack},best_score={self.best_score},score={self.score})"
 
     def discount_rewards(self, rewards, gamma=1):
-        return np.round(
-            np.multiply(gamma ** np.arange(len(rewards)), np.array(rewards)), 2
-        )
-
+        return np.round(np.multiply(gamma ** np.arange(len(rewards)), np.array(rewards)), 2)
 
     def next_moves(self):
 
@@ -86,12 +83,12 @@ class TreeNode:
         moves = [Move(m, self.board) for m in moves]
 
         # We sort by score the moves given the color
-        # Indeed self.board.turn = True if it's white turn for example, 
+        # Indeed self.board.turn = True if it's white turn for example,
         # Then we want a descending order to get the best moves
-        moves = sorted(moves,key = lambda x : x.score,reverse = self.board.turn)
+        moves = sorted(moves, key=lambda x: x.score, reverse=self.board.turn)
         return moves
 
-    def next_nodes(self,sample_moves = None):
+    def next_nodes(self, sample_moves=None):
 
         # Parse and analyse each possible move
         moves = self.next_moves()
@@ -104,17 +101,17 @@ class TreeNode:
         children = []
         for move in moves:
             child_tree = TreeNode(
-                self.board, move, 
+                self.board,
+                move,
                 stack=self.stack + [move],
-                best_score = self.best_score + move.score,
-                start_time = self.start_time,
-                max_time = self.max_time
+                best_score=self.best_score + move.score,
+                start_time=self.start_time,
+                max_time=self.max_time,
             )
             children.append(child_tree)
         return children
 
-
-    def expand(self,depth=5,pruning = True,sample_moves = None):
+    def expand(self, depth=5, pruning=True, sample_moves=None):
 
         # If we reached the final node
         # Because there is no children leaves or because we reach maximum exploration depth
@@ -136,7 +133,7 @@ class TreeNode:
             ]
 
             # Return best score and move stack
-            return self.score,stack
+            return self.score, stack
 
         # If we did not reach the final node
         else:
@@ -169,13 +166,13 @@ class TreeNode:
                 # We recursively expand (depth-first search) the child node
                 # - child_score is the score after expansion
                 # - child.score is the natural score of the node
-                child_score,stack = child.expand(depth-1,pruning,sample_moves)
+                child_score, stack = child.expand(depth - 1, pruning, sample_moves)
 
                 # Core Minimax algorithm
                 if self.is_white_turn():
-                    
+
                     # If the child has a better score (for white we maximize)
-                    # We keep this node and its score as the score to beat 
+                    # We keep this node and its score as the score to beat
                     if child_score > score:
                         score = child_score
                         best_child = child
@@ -189,10 +186,10 @@ class TreeNode:
                 # We save the traversed children and the move stack
                 stacks.extend(stack)
                 node_children.append(child)
-                    
+
             # Finally for a given node we keep track of the best scores (in total and the decomposition in the tree)
             # And we conclude the recursive loop by returning again the best core and move stack
             self.best_score = self.score + best_child.best_score
-            self.trace_score = [self.score,*best_child.trace_score]
+            self.trace_score = [self.score, *best_child.trace_score]
             self.children = node_children
-            return self.best_score,stacks
+            return self.best_score, stacks
