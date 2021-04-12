@@ -52,6 +52,10 @@ class SwissTournament:
             self._players = pd.DataFrame(players, columns=["name", "elo"]).set_index("name")
             self._rounds = pd.DataFrame(columns=ROUNDS_COLS)
 
+        duplicated_players = self.players.index[self.players.index.duplicated()].tolist()
+        if len(duplicated_players) > 0:
+            raise Exception(f"Players {duplicated_players} are duplicated in the player list, remove them to use the pairing system")
+
         print(f"[INFO] Swiss tournament with {len(self.players)} players - current round : {self.current_round}")
 
     def save(self, path: str) -> None:
@@ -235,7 +239,7 @@ class SwissTournament:
                         paired_players.extend(pair)
 
                 retry = False
-            except:
+            except Exception as e:
                 print(f"[INFO] Failed to find suitable pairs at trial {i}, matching again ...")
                 if i == trials:
                     retry = False
@@ -271,7 +275,7 @@ class SwissTournament:
         if len(existing_round_data) > 0:
             if overwrite:
                 print(f"[INFO] Overwriting round {current_round} data")
-                self.rounds = self.rounds.drop(existing_round_data.index)
+                self._rounds = self._rounds.drop(existing_round_data.index)
             else:
                 raise Exception(f"You already have data for round {current_round} which is not finished")
 
@@ -282,7 +286,7 @@ class SwissTournament:
     def pair_player(self, player, data=None, avoid=None, n=3):
 
         if data is None:
-            self.compute_players_scores()
+            data = self.compute_players_scores()
 
         score = "elo" if self.current_round == 1 else "score"
 
@@ -312,7 +316,10 @@ class SwissTournament:
             possible_pairs = never_played_players.iloc[np.squeeze(ind)].index.tolist()
 
         # Randomly select one of the possible matches
-        paired_player = np.random.choice(possible_pairs)
+        try:
+            paired_player = np.random.choice(possible_pairs)
+        except Exception as e:
+            raise Exception(f"Cannot choose a paired player for '{player}' from {possible_pairs}.\nNever played players:{never_played_players.index.tolist()}\nOriginal error : {e}")
 
         return paired_player
 
