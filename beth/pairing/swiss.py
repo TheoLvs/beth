@@ -49,8 +49,10 @@ class SwissTournament:
         if path is not None:
             self.load(path)
         else:
-            self._players = pd.DataFrame(players, columns=["name", "elo"]).set_index("name")
+            self._players = pd.DataFrame(players).set_index("name")
             self._rounds = pd.DataFrame(columns=ROUNDS_COLS)
+
+        assert "elo" in self.players.columns
 
         duplicated_players = self.players.index[self.players.index.duplicated()].tolist()
         if len(duplicated_players) > 0:
