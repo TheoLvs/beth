@@ -110,8 +110,8 @@ class Board(chess.Board):
             white_heuristics = (white_board * heuristics_matrix[:, :, 0, :]).sum()
             black_heuristics = (black_board * heuristics_matrix[:, :, 1, :]).sum()
 
-            white_score += white_heuristics
-            black_score += black_heuristics
+            white_score += 0.5 * white_heuristics
+            black_score += 0.5 * black_heuristics
 
         return (white_score - black_score, white_score, black_score)
 

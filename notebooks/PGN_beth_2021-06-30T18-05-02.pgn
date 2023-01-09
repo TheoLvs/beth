@@ -1,0 +1,11 @@
+[Event "Beth library development"]
+[Site "Virtual"]
+[Date "2021-06-30"]
+[Round "1"]
+[White "HumanPlayer"]
+[Black "TreeSearchAI(depth=5,breadth=20)"]
+[Result "*"]
+[Description "Game against Axel Richier during Eki tournament 2021"]
+
+1. e4 Nf6 2. f3 Nc6 3. d4 e5 4. Nc3 Nxd4 5. Nge2 Nxe2 6. Bxe2 d5 7. Bb5+ Bd7 8. a4 Bxb5 9. axb5 dxe4 10. Qe2 Bd6 11. fxe4 O-O 12. g4 Re8 13. g5 Nxe4 14. Nxe4 Qc8 15. g6 hxg6 16. h4 Qe6 17. h5 gxh5 18. Qxh5 Bb4+ 19. c3 Rad8 20. cxb4 Rd2 21. Bxd2 a6 22. bxa6 bxa6 23. b5 axb5 24. Ra7 b4 25. Rxc7 b3 26. Qh7+ Kf8 27. Bb4+ Qd6 28. Nxd6 e4 29. Nxe4+ Re7 30. Bxe7+ Ke8 31. Qh8# *
+
